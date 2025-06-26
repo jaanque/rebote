@@ -19,6 +19,31 @@ function App() {
           </div>
         </div>
       </div>
+      
+      <div className="how-it-works-section">
+        <h2 className="how-it-works-title">How Bello works</h2>
+        <p className="how-it-works-subtitle">It only takes a moment.</p>
+        
+        <div className="steps-container">
+          <div className="step">
+            <div className="step-icon">📍</div>
+            <h3 className="step-title">Find a nearby spot</h3>
+            <p className="step-description">Open the map and choose where to breathe.</p>
+          </div>
+          
+          <div className="step">
+            <div className="step-icon">⚡</div>
+            <h3 className="step-title">Book it instantly</h3>
+            <p className="step-description">15 to 60 minutes, no hassle.</p>
+          </div>
+          
+          <div className="step">
+            <div className="step-icon">✨</div>
+            <h3 className="step-title">Enjoy the moment</h3>
+            <p className="step-description">Balconies, sofas, rooftops, hidden gardens…</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

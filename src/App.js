@@ -6,16 +6,16 @@ function App() {
   
   const moments = [
     {
-      text: "20 minutes before my meeting.",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&crop=center"
+      text: "Where I used to sit in silence.",
+      image: "https://i.ibb.co/KjjdCJXp/assets-task-01jypn5e1af4h97a6kpe959qgc-1750959691-img-0.webp"
     },
     {
-      text: "A quiet rooftop to call home.",
-      image: "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&h=400&fit=crop&crop=center"
+      text: "A pool a few floors above the city.",
+      image: "https://i.ibb.co/Z1Kts785/assets-task-01jyq5dxy6etqaajzvd6tpz0fq-1750976725-img-0.webp"
     },
     {
-      text: "Just me, a hammock, and the sun.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&crop=center"
+      text: "Escape from the routine.",
+      image: "https://i.ibb.co/TxWb1H6f/assets-task-01jyppd6f7egrbfffppdwg9ezd-1750960992-img-1.webp"
     }
   ];
   
@@ -41,8 +41,8 @@ function App() {
           <h1 className="title">Own the moment</h1>
           <p className="subtitle">Find places to pause, breathe, and take in the view—instantly.</p>
           <div className="button-container">
-            <button className="btn btn-black">How it works?</button>
-            <button className="btn btn-white">Discover now</button>
+            <button className="btn btn-black">Host a space</button>
+            <button className="btn btn-white">Find a space</button>
           </div>
         </div>
       </div>
@@ -151,25 +151,14 @@ function App() {
               <span className="space-text">Studios</span>
             </div>
             <div className="space-item">
-              <span className="space-emoji">🪟</span>
+              <span className="space-emoji">🎪</span>
               <span className="space-text">Porches</span>
             </div>
           </div>
         </div>
       </div>
-      
-      <div className="host-section">
-        <div className="host-container">
-          <div className="host-content">
-            <span className="host-emoji">🙋‍♂️</span>
-            <h2 className="host-title">Have a place someone could use?</h2>
-            <p className="host-description">Even 15 minutes can change someone's day.</p>
-            <p className="host-subtitle">Earn by sharing your unused space—on your schedule.</p>
-            <button className="btn host-btn">Host your space</button>
-          </div>
-        </div>
-      </div>
     </div>
+    
   );
 }
 

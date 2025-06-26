@@ -1,7 +1,25 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
   const imageUrl = "https://i.ibb.co/SwQF8smr/assets-task-01jyp74gvkf7vtdapm143gsw99-1750945157-img-0.webp";
+  
+  const moments = [
+    {
+      text: "20 minutes before my meeting.",
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&crop=center"
+    },
+    {
+      text: "A quiet rooftop to call home.",
+      image: "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&h=400&fit=crop&crop=center"
+    },
+    {
+      text: "Just me, a hammock, and the sun.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&crop=center"
+    }
+  ];
+  
+  const [selectedMoment, setSelectedMoment] = useState(0);
   
   return (
     <div className="App">
@@ -71,7 +89,7 @@ function App() {
         <div className="moments-container">
           <div className="moments-image">
             <img 
-              src="https://i.ibb.co/SwQF8smr/assets-task-01jyp74gvkf7vtdapm143gsw99-1750945157-img-0.webp" 
+              src={moments[selectedMoment].image}
               alt="Moments Made for Bello" 
               className="moments-img"
             />
@@ -79,11 +97,75 @@ function App() {
           <div className="moments-content">
             <h2 className="moments-title"><strong>Moments Made for Bello</strong></h2>
             <ul className="moments-list">
-              <li className="moment-item">"20 minutes before my meeting."</li>
-              <li className="moment-item">"A quiet rooftop to call home."</li>
-              <li className="moment-item">"Just me, a hammock, and the sun."</li>
+              {moments.map((moment, index) => (
+                <li 
+                  key={index}
+                  className={`moment-item ${selectedMoment === index ? 'active' : ''}`}
+                  onClick={() => setSelectedMoment(index)}
+                >
+                  "{moment.text}"
+                </li>
+              ))}
             </ul>
             <p className="moments-subtitle"><strong>Whatever the moment, there's a space for it.</strong></p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="spaces-section">
+        <div className="spaces-container">
+          <h2 className="spaces-title">Spaces You'll Love</h2>
+          <p className="spaces-subtitle">Browse real places shared by hosts across the city:</p>
+          
+          <div className="spaces-grid">
+            <div className="space-item">
+              <span className="space-emoji">🌿</span>
+              <span className="space-text">Balconies with plants</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">🌇</span>
+              <span className="space-text">Rooftops with views</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">🌼</span>
+              <span className="space-text">Garden corners</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">🛋️</span>
+              <span className="space-text">Indoor chill spots</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">📖</span>
+              <span className="space-text">Reading nooks</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">💤</span>
+              <span className="space-text">Hammocks</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">⛵</span>
+              <span className="space-text">Boats</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">🎨</span>
+              <span className="space-text">Studios</span>
+            </div>
+            <div className="space-item">
+              <span className="space-emoji">🪟</span>
+              <span className="space-text">Porches</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="host-section">
+        <div className="host-container">
+          <div className="host-content">
+            <span className="host-emoji">🙋‍♂️</span>
+            <h2 className="host-title">Have a place someone could use?</h2>
+            <p className="host-description">Even 15 minutes can change someone's day.</p>
+            <p className="host-subtitle">Earn by sharing your unused space—on your schedule.</p>
+            <button className="btn host-btn">Host your space</button>
           </div>
         </div>
       </div>

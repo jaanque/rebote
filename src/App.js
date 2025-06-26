@@ -11,7 +11,13 @@ function App() {
           backgroundImage: `url(${imageUrl})`
         }}
       >
-        <h1 className="title">Own the moment</h1>
+        <div className="content">
+          <h1 className="title">Own the moment</h1>
+          <div className="button-container">
+            <button className="btn btn-black">How it works?</button>
+            <button className="btn btn-white">Discover now</button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -47,7 +47,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
 }
 
 .title {
@@ -59,10 +59,22 @@
   padding: 0;
 }
 
+.subtitle {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
 .button-container {
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-top: 25px;
 }
 
 .btn {
@@ -103,7 +115,6 @@
 .btn-black:hover {
   background-color: #111111;
 }
-
 
 .how-it-works-section {
   padding: 80px 20px;
@@ -166,6 +177,75 @@
   margin: 0;
 }
 
+.moments-section {
+  padding: 80px 20px;
+  background-color: #f2f2f2;
+}
+
+.moments-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.moments-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.moments-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.moments-content {
+  flex: 1;
+  text-align: left;
+}
+
+.moments-title {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.moments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.moment-item {
+  color: #666;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  border-left: 4px solid #333;
+  padding-left: 25px;
+  transition: all 0.3s ease;
+}
+
+.moment-item:hover {
+  color: #333;
+  border-left-color: #666;
+  padding-left: 30px;
+}
+
+.moments-subtitle {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .logo-container {
     top: 15px;
@@ -183,6 +263,10 @@
   
   .title {
     font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
   }
   
   .button-container {
@@ -209,6 +293,33 @@
   
   .how-it-works-section {
     padding: 60px 20px;
+  }
+  
+  .moments-section {
+    padding: 60px 20px;
+  }
+  
+  .moments-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .moments-content {
+    text-align: center;
+  }
+  
+  .moments-title {
+    font-size: 2rem;
+  }
+  
+  .moment-item {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  .moments-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
   }
   
   .how-it-works-title {
@@ -245,6 +356,10 @@
     font-size: 2.5rem;
   }
   
+  .subtitle {
+    font-size: 1.0rem;
+  }
+  
   .btn {
     font-size: 1rem;
     padding: 0;
@@ -266,6 +381,18 @@
   
   .how-it-works-subtitle {
     font-size: 1rem;
+  }
+  
+  .moments-title {
+    font-size: 1.6rem;
+  }
+  
+  .moment-item {
+    font-size: 1.1rem;
+  }
+  
+  .moments-subtitle {
+    font-size: 1.1rem;
   }
   
   .step-icon svg {

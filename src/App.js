@@ -21,6 +21,7 @@ function App() {
         </div>
         <div className="content">
           <h1 className="title">Own the moment</h1>
+          <p className="subtitle">Find places to pause, breathe, and take in the view—instantly.</p>
           <div className="button-container">
             <button className="btn btn-black">How it works?</button>
             <button className="btn btn-white">Discover now</button>
@@ -62,6 +63,27 @@ function App() {
             </div>
             <h3 className="step-title">Enjoy the moment</h3>
             <p className="step-description">Balconies, sofas, rooftops, hidden gardens…</p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="moments-section">
+        <div className="moments-container">
+          <div className="moments-image">
+            <img 
+              src="https://i.ibb.co/SwQF8smr/assets-task-01jyp74gvkf7vtdapm143gsw99-1750945157-img-0.webp" 
+              alt="Moments Made for Bello" 
+              className="moments-img"
+            />
+          </div>
+          <div className="moments-content">
+            <h2 className="moments-title"><strong>Moments Made for Bello</strong></h2>
+            <ul className="moments-list">
+              <li className="moment-item">"20 minutes before my meeting."</li>
+              <li className="moment-item">"A quiet rooftop to call home."</li>
+              <li className="moment-item">"Just me, a hammock, and the sun."</li>
+            </ul>
+            <p className="moments-subtitle"><strong>Whatever the moment, there's a space for it.</strong></p>
           </div>
         </div>
       </div>

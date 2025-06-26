@@ -43,14 +43,24 @@
 }
 
 .btn {
-  padding: 15px 30px;
+  padding: 0;
   font-size: 1.5rem;
   font-weight: 600;
   border: none;
   border-radius: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 150px;
+  width: 200px;
+  height: 60px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: top;
+  font-family: inherit;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 .btn-white {
@@ -82,7 +92,8 @@
   }
   
   .btn {
-    min-width: 200px;
+    width: 220px;
+    height: 55px;
   }
 }
 
@@ -93,6 +104,8 @@
   
   .btn {
     font-size: 1rem;
-    padding: 12px 25px;
+    padding: 0;
+    width: 200px;
+    height: 50px;
   }
 }

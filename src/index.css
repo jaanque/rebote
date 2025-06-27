@@ -1,13 +1,66 @@
+/* Importar fuentes de Google Fonts aquí */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  /* Paleta de colores principal */
+  --azul-noche: #2C3E50;
+  --blanco-hueso: #F8F9FA;
+  --gris-claro: #E9ECEF;
+  --gris-medio: #6C757D;
+  --negro-suave: #212529;
+  --turquesa-suave: #4DB6AC;
+  --coral-suave: #F28B82; /* Acento opcional */
+
+  /* Versiones RGB para usar en rgba() */
+  --turquesa-suave-rgb: 77, 182, 172;
+  --negro-suave-rgb: 33, 37, 41;
+  --azul-noche-rgb: 44, 62, 80;
+
+  /* Tipografía */
+  --font-principal: 'Montserrat', sans-serif;
+  --font-secundaria: 'Open Sans', sans-serif;
+
+  /* Otros globales */
+  --border-radius-sm: 8px;
+  --border-radius-md: 15px;
+  --border-radius-lg: 20px;
+  --border-radius-pill: 30px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: var(--font-secundaria), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background-color: var(--blanco-hueso);
+  color: var(--negro-suave);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6; /* Un line-height base mejora la legibilidad */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  background-color: var(--gris-claro);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em; /* Ligeramente más pequeño que el texto circundante */
+}
+
+/* Opcional: Estilos base para links si se desea un look más sutil que el default del navegador */
+a {
+  color: var(--turquesa-suave);
+  text-decoration: none; /* Quitar subrayado por defecto, se puede añadir en hover si se desea */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayado en hover como feedback común */
 }

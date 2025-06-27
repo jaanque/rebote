@@ -2,13 +2,13 @@
   text-align: center;
   background-color: #f2f2f2;
   min-height: 100vh;
-  padding: 20px;
+  padding: 1rem; /* Use rem for scalable padding */
   box-sizing: border-box;
 }
 
 .App-container {
   border-radius: 20px;
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 2rem); /* Adjust based on new padding */
   margin: 0 auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-size: cover;
@@ -18,26 +18,27 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 1rem; /* Add padding for smaller screens */
 }
 
 .logo-container {
   position: absolute;
-  top: 20px;
-  left: 30px;
+  top: 1rem; /* Use rem */
+  left: 1.5rem; /* Use rem */
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem; /* Use rem */
   z-index: 10;
 }
 
 .logo {
-  width: 60px;
+  width: clamp(40px, 10vw, 60px); /* Responsive logo size */
   height: auto;
 }
 
 .logo-text {
   color: white;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem); /* Responsive font size */
   font-weight: 900;
   text-transform: lowercase;
 }
@@ -47,12 +48,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 1rem; /* Use rem */
+  padding: 1rem; /* Add padding for content */
 }
 
 .title {
   color: white;
-  font-size: 7rem;
+  font-size: clamp(3rem, 10vw, 7rem); /* Responsive font size */
   font-weight: bold;
   text-align: center;
   margin: 0;
@@ -61,32 +63,40 @@
 
 .subtitle {
   color: white;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 4vw, 1.4rem); /* Responsive font size */
   font-weight: 400;
   text-align: center;
   margin: 0;
   padding: 0;
   opacity: 0.9;
-  white-space: nowrap;
+  white-space: normal; /* Allow wrapping */
 }
 
 .button-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column; /* Stack buttons on smaller screens */
+  gap: 1rem; /* Use rem */
   align-items: center;
-  margin-top: 25px;
+  margin-top: 1.5rem; /* Use rem */
+}
+
+@media (min-width: 600px) {
+  .button-container {
+    flex-direction: row; /* Row layout for larger screens */
+    gap: 1.25rem; /* Use rem */
+  }
 }
 
 .btn {
   padding: 0;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font size */
   font-weight: 600;
   border: none;
   border-radius: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 200px;
-  height: 60px;
+  width: clamp(150px, 40vw, 200px); /* Responsive width */
+  height: clamp(50px, 10vw, 60px);   /* Responsive height */
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -117,46 +127,54 @@
 }
 
 .how-it-works-section {
-  padding: 80px 20px;
+  padding: 4rem 1rem; /* Use rem for padding */
   margin: 0 auto;
 }
 
 .how-it-works-title {
   color: #333;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   font-weight: 700;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem; /* Use rem */
   line-height: 1.2;
 }
 
 .how-it-works-subtitle {
   color: #666;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   font-style: italic;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 3rem; /* Use rem */
   font-weight: 400;
 }
 
 .steps-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: 1fr; /* Default to single column */
+  gap: 2rem; /* Use rem */
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 1rem; /* Add padding for smaller screens */
+}
+
+@media (min-width: 768px) {
+  .steps-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; /* Use rem */
+  }
 }
 
 .step {
   text-align: center;
-  padding: 30px 20px;
+  padding: 1.5rem 1rem; /* Use rem */
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step-icon {
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 1rem; /* Use rem */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,40 +182,51 @@
 
 .step-title {
   color: #333;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 4vw, 1.4rem); /* Responsive font size */
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 0.8rem; /* Use rem */
   line-height: 1.3;
 }
 
 .step-description {
   color: #666;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive font size */
   line-height: 1.5;
   margin: 0;
 }
 
 .moments-section {
-  padding: 80px 20px;
+  padding: 4rem 1rem; /* Use rem */
   background-color: #f2f2f2;
 }
 
 .moments-container {
   display: flex;
-  align-items: flex-start;
-  gap: 60px;
+  flex-direction: column; /* Stack on smaller screens */
+  align-items: center; /* Center items when stacked */
+  gap: 2rem; /* Use rem */
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .moments-container {
+    flex-direction: row; /* Row layout for larger screens */
+    align-items: flex-start;
+    gap: 3rem; /* Use rem */
+  }
 }
 
 .moments-image {
   flex: 1;
   min-width: 0;
+  width: 100%; /* Ensure image container takes full width when stacked */
 }
 
 .moments-img {
   width: 100%;
-  height: 400px;
+  height: auto; /* Adjust height automatically */
+  max-height: 400px; /* Maintain max height if desired */
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -207,31 +236,45 @@
 .moments-content {
   flex: 1;
   text-align: left;
-  margin-top: -40px;
+  margin-top: 0; /* Remove negative margin for stacked layout */
+  width: 100%; /* Ensure content takes full width when stacked */
+}
+
+@media (min-width: 992px) {
+  .moments-content {
+    margin-top: -2rem; /* Restore negative margin for larger screens if needed */
+  }
 }
 
 .moments-title {
   color: #333;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem; /* Use rem */
   line-height: 1.2;
+  text-align: center; /* Center title on smaller screens */
+}
+
+@media (min-width: 992px) {
+  .moments-title {
+    text-align: left; /* Align left on larger screens */
+  }
 }
 
 .moments-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.5rem 0; /* Use rem */
 }
 
 .moment-item {
   color: #666;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   font-style: italic;
-  margin-bottom: 20px;
-  padding: 20px 0;
+  margin-bottom: 1rem; /* Use rem */
+  padding: 1rem 0; /* Use rem */
   border-left: 4px solid #ddd;
-  padding-left: 25px;
+  padding-left: 1.25rem; /* Use rem */
   transition: all 0.3s ease;
   cursor: pointer;
   user-select: none;
@@ -240,29 +283,36 @@
 .moment-item:hover {
   color: #333;
   border-left-color: #666;
-  padding-left: 30px;
+  padding-left: 1.5rem; /* Use rem */
 }
 
 .moment-item.active {
   color: #333;
   border-left-color: #333;
   font-weight: 600;
-  padding-left: 30px;
+  padding-left: 1.5rem; /* Use rem */
   background-color: rgba(51, 51, 51, 0.05);
   border-radius: 8px;
-  margin-left: -10px;
-  padding-left: 35px;
+  margin-left: -0.5rem; /* Use rem */
+  padding-left: 1.75rem; /* Use rem */
 }
 
 .moments-subtitle {
   color: #333;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 4vw, 1.4rem); /* Responsive font size */
   font-weight: 600;
   margin: 0;
+  text-align: center; /* Center on smaller screens */
+}
+
+@media (min-width: 992px) {
+  .moments-subtitle {
+    text-align: left; /* Align left on larger screens */
+  }
 }
 
 .spaces-section {
-  padding: 80px 20px;
+  padding: 4rem 1rem; /* Use rem */
 }
 
 .spaces-container {
@@ -273,24 +323,24 @@
 
 .spaces-title {
   color: #333;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0.8rem; /* Use rem */
   line-height: 1.2;
 }
 
 .spaces-subtitle {
   color: #666;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   font-style: italic;
-  margin-bottom: 50px;
+  margin-bottom: 2.5rem; /* Use rem */
   font-weight: 400;
 }
 
 .spaces-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
+  gap: 1.5rem; /* Use rem */
   max-width: 900px;
   margin: 0 auto;
 }
@@ -298,40 +348,38 @@
 .space-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 20px 25px;
+  gap: 1rem; /* Use rem */
+  padding: 1rem 1.25rem; /* Use rem */
   border-radius: 15px;
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid #5b5a5a;
-  transition: 1s;
 }
 
 .space-item:hover {
   background-color: whitesmoke;
   border: 1px solid #5b5a5a;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: 1s;
 }
 
 .space-emoji {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem); /* Responsive font size */
   min-width: 24px;
   text-align: center;
 }
 
 .space-text {
   color: #333;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem); /* Responsive font size */
   font-weight: 500;
   text-align: left;
 }
 
 .host-section {
-  padding: 0;
+  padding: 2rem 1rem; /* Use rem and add horizontal padding */
   background-color: #f2f2f2;
   border-radius: 20px;
-  margin: 40px 0;
+  margin: 2rem 0; /* Use rem */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-size: cover;
   background-position: center;
@@ -340,14 +388,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 400px;
+  min-height: 300px; /* Adjusted min-height */
 }
 
 .host-container {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding: 60px 40px;
+  padding: 2rem; /* Use rem */
   position: relative;
   z-index: 2;
 }
@@ -366,26 +414,26 @@
 
 .host-title {
   color: white;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0.8rem; /* Use rem */
   line-height: 1.2;
 }
 
 .host-subtitle {
   color: white;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 1.25rem; /* Use rem */
   font-weight: 400;
   opacity: 0.9;
 }
 
 .host-description {
   color: white;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem); /* Responsive font size */
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 2rem; /* Use rem */
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -393,99 +441,99 @@
 }
 
 .host-btn {
-  margin-top: 10px;
+  margin-top: 0.5rem; /* Use rem */
 }
 
 /* Sección de testimonios */
 .testimonials-section {
-  padding: 80px 20px;
-  background-color: #f2f2f2; /* Fondo más limpio */
+  padding: 4rem 1rem; /* Use rem */
+  background-color: #f2f2f2;
 }
 
 .testimonials-container {
-  max-width: 1100px; /* Aumentar el ancho máximo para el diseño de grid */
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
 
 .testimonials-title {
   color: #333;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   font-weight: 700;
-  margin-bottom: 15px; /* Reducir margen inferior */
+  margin-bottom: 0.8rem; /* Use rem */
   line-height: 1.2;
 }
 
 .testimonials-subtitle {
   color: #666;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   font-style: italic;
-  margin-bottom: 50px; /* Aumentar margen para separar del grid */
+  margin-bottom: 2.5rem; /* Use rem */
   font-weight: 400;
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsive */
-  gap: 30px; /* Espacio entre tarjetas */
-  margin-bottom: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax */
+  gap: 1.5rem; /* Use rem */
+  margin-bottom: 2.5rem; /* Use rem */
 }
 
 .testimonial-card {
-  border: 1px solid #5b5a5a; /* Borde sutil */
+  border: 1px solid #5b5a5a;
   border-radius: 15px;
-  padding: 30px;
+  padding: 1.5rem; /* Use rem */
   text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Para alinear el rating abajo */
+  justify-content: space-between;
 }
 
 .testimonial-card:hover {
-  border: 1px solid #000; /* Borde más prominente al pasar el mouse */
+  border: 1px solid #000;
 }
 
 .testimonial-card-content {
-  margin-bottom: 20px; /* Espacio entre texto y rating */
+  margin-bottom: 1rem; /* Use rem */
 }
 
 .testimonial-text {
   color: #555;
-  font-size: 1.1rem; /* Tamaño de fuente ajustado */
+  font-size: clamp(0.9rem, 3vw, 1.1rem); /* Responsive font size */
   font-style: italic;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: 0.8rem; /* Use rem */
 }
 
 .testimonial-author {
   color: #333;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem); /* Responsive font size */
   font-weight: 600;
   text-align: right;
 }
 
 .testimonial-rating .star-icon {
-  color: #f5a623; /* Color para estrellas */
-  margin-right: 2px; /* Pequeño espacio entre estrellas */
+  color: #f5a623;
+  margin-right: 2px;
 }
 
 .overall-rating-summary {
-  margin-top: 40px;
-  padding-top: 30px;
+  margin-top: 2rem; /* Use rem */
+  padding-top: 1.5rem; /* Use rem */
 }
 
 .overall-rating-text {
   color: #333;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3.5vw, 1.2rem); /* Responsive font size */
   font-weight: 500;
   margin: 0;
 }
 
 .overall-rating-text .star-icon.inline-star {
-  vertical-align: middle; /* Alinear estrellas con el texto */
-  margin-bottom: 2px; /* Ajuste fino de alineación vertical */
+  vertical-align: middle;
+  margin-bottom: 2px;
   margin-right: 1px;
   color: #f5a623;
 }
@@ -493,25 +541,25 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .testimonials-grid {
-    grid-template-columns: 1fr; /* Una columna en móviles */
+    grid-template-columns: 1fr;
   }
 
   .testimonials-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
   }
 
   .testimonials-subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem); /* Responsive font size */
   }
 
   .testimonial-card {
-    padding: 25px;
+    padding: 1.25rem; /* Use rem */
   }
 }
 
 /* Why Bello Exists Section - Revised for evocative feel */
 .why-bello-exists-section {
-  padding: 100px 20px;
+  padding: 5rem 1rem; /* Use rem */
 }
 
 .why-bello-exists-container {
@@ -521,19 +569,19 @@
 }
 
 .why-bello-exists-title {
-  color: #2c3e50; /* Deep, thoughtful blue-grey */
-  font-size: 2.9rem; /* Refined size */
+  color: #2c3e50;
+  font-size: clamp(1.8rem, 5.5vw, 2.9rem); /* Responsive font size */
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem; /* Use rem */
   line-height: 1.35;
 }
 
 .why-bello-exists-intro {
-  color: #4a5568; /* Softer, elegant grey */
-  font-size: 1.3rem;
+  color: #4a5568;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   font-style: italic;
   line-height: 1.85;
-  margin-bottom: 45px;
+  margin-bottom: 2.25rem; /* Use rem */
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
@@ -541,9 +589,9 @@
 
 .why-bello-exists-mission {
   color: #333;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3.5vw, 1.2rem); /* Responsive font size */
   line-height: 1.8;
-  margin-bottom: 50px;
+  margin-bottom: 2.5rem; /* Use rem */
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
@@ -552,17 +600,17 @@
 .why-bello-exists-values-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 35px; /* Adjusted gap */
-  margin-top: 60px;
-  margin-bottom: 60px;
+  gap: 1.75rem; /* Use rem */
+  margin-top: 3rem; /* Use rem */
+  margin-bottom: 3rem; /* Use rem */
   text-align: left;
 }
 
 .why-bello-exists-value-item {
-  padding: 30px 25px; /* More padding */
-  border-radius: 15px; /* Softer radius */
+  padding: 1.5rem 1.25rem; /* Use rem */
+  border-radius: 15px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  border: 1px solid #5b5a5a; /* Subtle border for definition */
+  border: 1px solid #5b5a5a;
 }
 
 .why-bello-exists-value-item:hover {
@@ -570,123 +618,123 @@
 }
 
 .why-bello-exists-value-icon {
-  font-size: 2.2rem; /* Slightly larger icon */
+  font-size: clamp(1.8rem, 5vw, 2.2rem); /* Responsive font size */
   display: block;
-  margin-bottom: 18px;
-  color: #5dade2; /* A gentle, inspiring blue */
-  text-align: center; /* Center icon within its block */
+  margin-bottom: 1rem; /* Use rem */
+  color: #5dade2;
+  text-align: center;
 }
 
 .why-bello-exists-value-title {
-  color: #2c3e50; /* Consistent with main title color */
-  font-size: 1.35rem;
+  color: #2c3e50;
+  font-size: clamp(1.1rem, 4vw, 1.35rem); /* Responsive font size */
   font-weight: 600;
-  margin-bottom: 12px;
-  text-align: center; /* Center title */
+  margin-bottom: 0.6rem; /* Use rem */
+  text-align: center;
 }
 
 .why-bello-exists-value-text {
-  color: #5a6878; /* Readable grey */
-  font-size: 1.05rem; /* Adjusted size */
+  color: #5a6878;
+  font-size: clamp(0.9rem, 3vw, 1.05rem); /* Responsive font size */
   line-height: 1.65;
-  text-align: center; /* Center text */
+  text-align: center;
 }
 
 .why-bello-exists-credo {
   color: #2c3e50;
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 4.5vw, 1.4rem); /* Responsive font size */
   line-height: 1.9;
-  margin-top: 60px;
+  margin-top: 3rem; /* Use rem */
   font-style: italic;
-  font-weight: 500; /* Slightly bolder for emphasis */
+  font-weight: 500;
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* Responsive adjustments for the revised Why Bello Exists section */
-@media (max-width: 992px) { /* Adjust breakpoint for values grid */
+@media (max-width: 992px) {
   .why-bello-exists-values-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Allow more space before stacking to 1 col */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
   }
 }
 
 @media (max-width: 768px) {
   .why-bello-exists-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
   }
   .why-bello-exists-intro,
   .why-bello-exists-mission,
   .why-bello-exists-credo {
-    font-size: 1.2rem; /* Keep it readable on mobile */
+    font-size: clamp(1rem, 3.5vw, 1.2rem); /* Responsive font size */
     line-height: 1.75;
   }
   .why-bello-exists-intro {
-    font-size: 1.25rem;
+    font-size: clamp(1.05rem, 3.8vw, 1.25rem); /* Responsive font size */
   }
   .why-bello-exists-values-container {
-    grid-template-columns: 1fr; /* Single column for values */
-    gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 1.25rem; /* Use rem */
   }
   .why-bello-exists-value-item {
-    padding: 25px 20px;
+    padding: 1.25rem 1rem; /* Use rem */
   }
   .why-bello-exists-value-title {
-    font-size: 1.25rem;
+    font-size: clamp(1.05rem, 3.8vw, 1.25rem); /* Responsive font size */
   }
   .why-bello-exists-value-text {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive font size */
   }
   .why-bello-exists-credo {
-    font-size: 1.3rem;
+    font-size: clamp(1.05rem, 4vw, 1.3rem); /* Responsive font size */
   }
 }
 
 /* FAQ Section */
 .faq-section {
-  padding: 80px 20px;
-  background-color: #f2f2f2; /* Consistent with other light sections */
+  padding: 4rem 1rem; /* Use rem */
+  background-color: #f2f2f2;
 }
 
 .faq-container {
-  max-width: 900px; /* Similar to other content containers */
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 
 .faq-title {
   color: #333;
-  font-size: 3rem; /* Consistent with .how-it-works-title */
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   font-weight: 700;
-  margin-bottom: 50px; /* Space below title */
+  margin-bottom: 2.5rem; /* Use rem */
   line-height: 1.2;
 }
 
 .faq-list {
-  text-align: left; /* Align Q&As to the left for readability */
-  margin-bottom: 40px; /* Space before the "View full FAQ" link */
+  text-align: left;
+  margin-bottom: 2rem; /* Use rem */
 }
 
 .faq-item {
-  margin-bottom: 30px; /* Space between FAQ items */
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd; /* Separator line */
+  margin-bottom: 1.5rem; /* Use rem */
+  padding-bottom: 1rem; /* Use rem */
+  border-bottom: 1px solid #ddd;
 }
 
 .faq-item:last-child {
-  border-bottom: none; /* No line for the last item */
+  border-bottom: none;
   margin-bottom: 0;
 }
 
 .faq-question {
   color: #333;
-  font-size: 1.4rem; /* Readable question size */
+  font-size: clamp(1.1rem, 4vw, 1.4rem); /* Responsive font size */
   font-weight: 600;
-  margin-bottom: 10px; /* Will be reset if item is not open */
+  margin-bottom: 0.5rem; /* Use rem, adjusted for when answer is closed */
   line-height: 1.4;
   cursor: pointer;
   position: relative;
-  padding-right: 30px; /* Space for indicator */
+  padding-right: 2rem; /* Use rem, space for indicator */
   transition: margin-bottom 0.3s ease;
 }
 
@@ -696,7 +744,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 5vw, 1.8rem); /* Responsive font size */
   color: #333;
   transition: transform 0.3s ease;
 }
@@ -711,10 +759,10 @@
 
 .faq-answer {
   color: #666;
-  font-size: 1.1rem; /* Slightly smaller answer text */
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem); /* Responsive font size */
   line-height: 1.6;
   margin: 0;
-  padding-top: 10px; /* Space between question and answer */
+  padding-top: 0.5rem; /* Use rem */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out, padding-top 0.4s ease-out, opacity 0.3s ease-out;
@@ -722,18 +770,18 @@
 }
 
 .faq-item.open .faq-answer {
-  max-height: 500px; /* Adjust as needed, should be larger than any possible answer */
+  max-height: 500px; /* Adjust as needed */
   opacity: 1;
   transition: max-height 0.5s ease-in, padding-top 0.5s ease-in, opacity 0.4s ease-in 0.1s;
 }
 
 .faq-link {
-  color: #333; /* Default link color */
-  font-size: 1.2rem;
+  color: #333;
+  font-size: clamp(1rem, 3.5vw, 1.2rem); /* Responsive font size */
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem; /* Use rem */
   border: 2px solid #333;
   border-radius: 30px;
   transition: all 0.3s ease;
@@ -742,4 +790,36 @@
 .faq-link:hover {
   background-color: #333;
   color: white;
+}
+
+/* Additional Media Queries for finer control */
+@media (max-width: 480px) {
+  .App {
+    padding: 0.5rem;
+  }
+  .App-container {
+    min-height: calc(100vh - 1rem);
+    padding: 0.5rem;
+  }
+  .logo-container {
+    top: 0.5rem;
+    left: 0.8rem;
+  }
+  .content {
+    gap: 0.8rem;
+  }
+  .button-container {
+    margin-top: 1rem;
+  }
+  .btn {
+    width: clamp(120px, 35vw, 180px);
+    height: clamp(45px, 9vw, 55px);
+  }
+  .how-it-works-section, .moments-section, .spaces-section, .host-section, .testimonials-section, .why-bello-exists-section, .faq-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+   .steps-container, .spaces-grid, .testimonials-grid, .why-bello-exists-values-container {
+    padding: 0 0.5rem;
+  }
 }

@@ -1,5 +1,5 @@
 .what-is-bello-section {
-  padding: 80px 20px;
+  padding: 4rem 1rem; /* Use rem for padding */
   text-align: center;
 }
 
@@ -10,90 +10,80 @@
 
 .what-is-bello-title {
   color: #333;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 1.25rem; /* Use rem */
   line-height: 1.2;
 }
 
 .what-is-bello-description {
-  color: #555; /* Un gris ligeramente más oscuro para buena legibilidad */
-  font-size: 1.3rem; /* Tamaño de fuente generoso */
-  line-height: 1.7; /* Espaciado de línea amplio para facilitar la lectura */
-  margin-bottom: 40px;
-  max-width: 750px; /* Limitar el ancho del párrafo para mejor legibilidad */
+  color: #555;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
+  line-height: 1.7;
+  margin-bottom: 2rem; /* Use rem */
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .what-is-bello-highlights {
   display: flex;
-  justify-content: space-around; /* Distribuir los elementos uniformemente */
-  align-items: flex-start; /* Alinear items al inicio si tienen alturas diferentes */
-  gap: 30px; /* Espacio entre los elementos destacados */
-  margin-top: 30px;
+  flex-direction: column; /* Default to column for mobile */
+  align-items: center; /* Center items in column layout */
+  gap: 2rem; /* Use rem */
+  margin-top: 1.5rem; /* Use rem */
+}
+
+@media (min-width: 768px) {
+  .what-is-bello-highlights {
+    flex-direction: row; /* Row layout for larger screens */
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.5rem; /* Use rem */
+  }
 }
 
 .highlight-item {
-  flex: 1; /* Permitir que los items crezcan y ocupen el espacio disponible */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Espacio entre el icono y el texto */
-  max-width: 250px; /* Ancho máximo para cada highlight */
+  gap: 0.5rem; /* Use rem */
+  max-width: 100%; /* Allow full width in column layout */
+}
+
+@media (min-width: 768px) {
+  .highlight-item {
+    max-width: 250px; /* Restore max-width for row layout */
+  }
 }
 
 .highlight-icon {
-  font-size: 2.5rem; /* Iconos grandes y visibles */
-  color: #333; /* Color principal para los iconos */
+  font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
+  color: #333;
 }
 
 .highlight-item p {
   color: #666;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem); /* Responsive font size */
   line-height: 1.5;
   margin: 0;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments from original file (merged and refined) */
 @media (max-width: 768px) {
-  .what-is-bello-title {
-    font-size: 2.5rem;
-  }
+  /* .what-is-bello-title is already responsive with clamp */
+  /* .what-is-bello-description is already responsive with clamp */
+  /* .what-is-bello-highlights is already set to column and centered */
 
-  .what-is-bello-description {
-    font-size: 1.15rem;
-  }
-
-  .what-is-bello-highlights {
-    flex-direction: column; /* Apilar los highlights en pantallas pequeñas */
-    align-items: center; /* Centrar los items cuando están en columna */
-    gap: 30px; /* Mantener un buen espacio vertical */
-  }
-
-  .highlight-item {
-    max-width: 100%; /* Permitir que ocupen el ancho completo en móviles */
-  }
-
-  .highlight-icon {
-    font-size: 2.2rem;
-  }
-
-  .highlight-item p {
-    font-size: 1rem;
-  }
+  /* .highlight-item max-width is already 100% for smaller screens */
+  /* .highlight-icon is already responsive with clamp */
+  /* .highlight-item p is already responsive with clamp */
 }
 
 @media (max-width: 480px) {
   .what-is-bello-section {
-    padding: 60px 15px;
+    padding: 3rem 0.8rem; /* Adjust padding for very small screens */
   }
-
-  .what-is-bello-title {
-    font-size: 2.2rem;
-  }
-
-  .what-is-bello-description {
-    font-size: 1.1rem;
-  }
+  /* Title, description, icon, and text are handled by clamp() */
 }

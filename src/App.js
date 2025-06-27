@@ -5,6 +5,7 @@ import './App.css';
 // import './WhatIsrebote.css'; // Merged into App.css
 import Footer from './footer.js';
 import WhatIsrebote from './WhatIsrebote.js';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const imageUrl = "https://i.ibb.co/SwQF8smr/assets-task-01jyp74gvkf7vtdapm143gsw99-1750945157-img-0.webp";
@@ -334,8 +335,9 @@ function App() {
         </div>
       </div>
       <Footer />
+      <Analytics />
     </div>
-    
+
   );
 }
 

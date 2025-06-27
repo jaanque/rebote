@@ -35,6 +35,61 @@
   }
 }
 
+/* FAQ Section Responsive */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 20px;
+  }
+
+  .faq-title {
+    font-size: 2.2rem; /* Match other section titles at this breakpoint */
+    margin-bottom: 40px;
+  }
+
+  .faq-question {
+    font-size: 1.25rem;
+    padding-right: 25px; /* Adjust space for indicator */
+  }
+
+  .faq-question::after {
+    font-size: 1.6rem; /* Adjust indicator size */
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+
+  .faq-link {
+    font-size: 1.1rem;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 1.8rem; /* Match other section titles */
+    margin-bottom: 30px;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    padding-right: 20px; /* Further adjust space for indicator */
+  }
+
+  .faq-question::after {
+    font-size: 1.5rem; /* Further adjust indicator size */
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+
+  .faq-link {
+    font-size: 1rem;
+    padding: 7px 15px;
+  }
+}
+
 @media (max-width: 480px) {
   .testimonials-title {
     font-size: 1.8rem;

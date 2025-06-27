@@ -21,6 +21,34 @@ function App() {
   ];
   
   const [selectedMoment, setSelectedMoment] = useState(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  const faqData = [
+    {
+      question: "What types of spaces are available?",
+      answer: "Everything from rooftops to hammocks. You’ll be surprised by the variety of unique spots available."
+    },
+    {
+      question: "How does booking/cancellation work?",
+      answer: "Book instantly with a few taps. Cancellations are easy too, though minimum notice periods may apply."
+    },
+    {
+      question: "How do I access the space?",
+      answer: "After booking, you'll receive a secure digital key, like a code or QR, for easy access."
+    },
+    {
+      question: "What if I arrive late?",
+      answer: "Your booking timer starts at the scheduled time. However, many hosts are flexible and may allow a grace period."
+    },
+    {
+      question: "Is it safe?",
+      answer: "Absolutely. All spaces are reviewed by our team, and access is designed to be secure and private."
+    },
+    {
+      question: "How do hosts earn?",
+      answer: "You set your price per moment. Payments are processed securely and deposited to you weekly."
+    }
+  ];
   
   return (
     <div className="App">
@@ -251,6 +279,28 @@ function App() {
             </div>
           </div>
           <p className="why-bello-exists-credo">Because peace isn’t a luxury for the weekend. It’s a necessity, just a few steps away. <br/>This is Bello. Your city, re-imagined.</p>
+        </div>
+      </div>
+
+      <div className="faq-section">
+        <div className="faq-container">
+          <h2 className="faq-title">Common Questions (FAQs)</h2>
+          <div className="faq-list">
+            {faqData.map((item, index) => (
+              <div key={index} className={`faq-item ${openFaqIndex === index ? 'open' : ''}`}>
+                <h3 
+                  className="faq-question" 
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                >
+                  {item.question}
+                </h3>
+                {openFaqIndex === index && (
+                  <p className="faq-answer">{item.answer}</p>
+                )}
+              </div>
+            ))}
+          </div>
+          <a href="#" className="faq-link">View full FAQ →</a>
         </div>
       </div>
     </div>

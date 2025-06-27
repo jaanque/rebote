@@ -641,3 +641,105 @@
     font-size: 1.3rem;
   }
 }
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 20px;
+  background-color: #f2f2f2; /* Consistent with other light sections */
+}
+
+.faq-container {
+  max-width: 900px; /* Similar to other content containers */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.faq-title {
+  color: #333;
+  font-size: 3rem; /* Consistent with .how-it-works-title */
+  font-weight: 700;
+  margin-bottom: 50px; /* Space below title */
+  line-height: 1.2;
+}
+
+.faq-list {
+  text-align: left; /* Align Q&As to the left for readability */
+  margin-bottom: 40px; /* Space before the "View full FAQ" link */
+}
+
+.faq-item {
+  margin-bottom: 30px; /* Space between FAQ items */
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* Separator line */
+}
+
+.faq-item:last-child {
+  border-bottom: none; /* No line for the last item */
+  margin-bottom: 0;
+}
+
+.faq-question {
+  color: #333;
+  font-size: 1.4rem; /* Readable question size */
+  font-weight: 600;
+  margin-bottom: 10px; /* Will be reset if item is not open */
+  line-height: 1.4;
+  cursor: pointer;
+  position: relative;
+  padding-right: 30px; /* Space for indicator */
+  transition: margin-bottom 0.3s ease;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item:not(.open) .faq-question {
+  margin-bottom: 0; /* Remove bottom margin if answer is hidden */
+}
+
+.faq-answer {
+  color: #666;
+  font-size: 1.1rem; /* Slightly smaller answer text */
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 10px; /* Space between question and answer */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding-top 0.4s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px; /* Adjust as needed, should be larger than any possible answer */
+  opacity: 1;
+  transition: max-height 0.5s ease-in, padding-top 0.5s ease-in, opacity 0.4s ease-in 0.1s;
+}
+
+.faq-link {
+  color: #333; /* Default link color */
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #333;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.faq-link:hover {
+  background-color: #333;
+  color: white;
+}

@@ -396,253 +396,78 @@
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .logo-container {
-    top: 15px;
-    left: 20px;
-    gap: 6px;
-  }
-  
-  .logo {
-    width: 45px;
-  }
-  
-  .logo-text {
-    font-size: 1.2rem;
-  }
-  
-  .title {
-    font-size: 3rem;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .button-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .btn {
-    width: 220px;
-    height: 55px;
-  }
-  
-  .description-section {
-    padding: 40px 20px;
-  }
-  
-  .description-title {
-    font-size: 2rem;
-  }
-  
-  .description-text {
-    font-size: 1.1rem;
-  }
-  
-  .how-it-works-section {
-    padding: 60px 20px;
-  }
-  
-  .moments-section {
-    padding: 60px 20px;
-  }
-  
-  .moments-container {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .moments-content {
-    text-align: center;
-  }
-  
-  .moments-title {
-    font-size: 2rem;
-  }
-  
-  .moment-item {
-    font-size: 1.2rem;
-    text-align: left;
-  }
-  
-  .moments-subtitle {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  
-  .how-it-works-title {
-    font-size: 2.2rem;
-  }
-  
-  .how-it-works-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-  }
-  
-  .steps-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .spaces-section {
-    padding: 60px 20px;
-  }
-  
-  .spaces-title {
-    font-size: 2.2rem;
-  }
-  
-  .spaces-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-  }
-  
-  .host-section {
-    margin: 20px 0;
-    min-height: 350px;
-  }
-  
-  .host-container {
-    padding: 50px 30px;
-  }
-  
-  .host-title {
-    font-size: 2.2rem;
-  }
-  
-  .host-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .host-description {
-    font-size: 1.1rem;
-  }
-  
-  .spaces-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .space-item {
-    padding: 18px 20px;
-  }
-  
-  .space-text {
-    font-size: 1rem;
-  }
-  
-  .host-section {
-    padding: 60px 20px;
-  }
+/* Sección de testimonios */
+.testimonials-section {
+  padding: 80px 20px;
+  background-color: #f2f2f2;
 }
 
-@media (max-width: 480px) {
-  .logo-container {
-    top: 10px;
-    left: 15px;
-    gap: 5px;
-  }
-  
-  .logo {
-    width: 35px;
-  }
-  
-  .logo-text {
-    font-size: 1rem;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.0rem;
-  }
-  
-  .btn {
-    font-size: 1rem;
-    padding: 0;
-    width: 200px;
-    height: 50px;
-  }
-  
-  .description-title {
-    font-size: 1.6rem;
-  }
-  
-  .description-text {
-    font-size: 1rem;
-  }
-  
-  .how-it-works-title {
-    font-size: 1.8rem;
-  }
-  
-  .how-it-works-subtitle {
-    font-size: 1rem;
-  }
-  
-  .moments-title {
-    font-size: 1.6rem;
-  }
-  
-  .moment-item {
-    font-size: 1.1rem;
-  }
-  
-  .moments-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .step-icon svg {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .step-title {
-    font-size: 1.2rem;
-  }
-  
-  .spaces-title {
-    font-size: 1.8rem;
-  }
-  
-  .spaces-subtitle {
-    font-size: 1rem;
-  }
-  
-  .space-item {
-    padding: 15px 18px;
-  }
-  
-  .space-emoji {
-    font-size: 1.3rem;
-  }
-  
-  .space-text {
-    font-size: 0.95rem;
-  }
-  
-  .host-section {
-    margin: 15px 0;
-    min-height: 300px;
-  }
-  
-  .host-container {
-    padding: 40px 20px;
-  }
-  
-  .host-title {
-    font-size: 1.8rem;
-  }
-  
-  .host-subtitle {
-    font-size: 1rem;
-  }
-  
-  .host-description {
-    font-size: 1rem;
-  }
+.testimonials-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-title {
+  color: #333;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.testimonials-quotes {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.testimonial-quote {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 350px;
+}
+
+.quote-emoji {
+  font-size: 1.5rem;
+  min-width: 24px;
+}
+
+.quote-text {
+  color: #666;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+}
+
+.testimonials-rating {
+  margin-bottom: 30px;
+}
+
+.stars {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.rating-text {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.testimonials-footer {
+  margin-top: 30px;
+}
+
+.footer-text {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
 }

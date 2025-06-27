@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import './2-App.css';
 
 function App() {
   const imageUrl = "https://i.ibb.co/SwQF8smr/assets-task-01jyp74gvkf7vtdapm143gsw99-1750945157-img-0.webp";
@@ -39,7 +40,7 @@ function App() {
         </div>
         <div className="content">
           <h1 className="title">Own the moment</h1>
-          <p className="subtitle">Find places to pause, breathe, and take in the view—instantly.</p>
+          <p className="subtitle">Find places to pause, breathe, and take in the view — instantly.</p>
           <div className="button-container">
             <button className="btn btn-black">Host a space</button>
             <button className="btn btn-white">Find a space</button>
@@ -157,7 +158,7 @@ function App() {
           </div>
         </div>
       </div>
-      
+
       <div 
         className="host-section"
         style={{
@@ -171,6 +172,30 @@ function App() {
             Let your space help someone reset. Earn for 15–60 minute bookings with full control and easy setup.
           </p>
           <button className="btn btn-white host-btn">Host your space</button>
+        </div>
+      </div>
+
+      <div className="testimonials-section">
+        <div className="testimonials-container">
+          <h2 className="testimonials-title">Loved by Early Users</h2>
+          
+          <div className="testimonials-quotes">
+            <div className="testimonial-quote">
+              <p className="quote-text">"Bello's rooftop saved my mental sanity."</p>
+            </div>
+            <div className="testimonial-quote">
+              <p className="quote-text">"A minute on that balcony changed my mood."</p>
+            </div>
+          </div>
+          
+          <div className="testimonials-rating">
+            <div className="stars">⭐⭐⭐⭐⭐</div>
+            <p className="rating-text">Rated by our first 1000 users</p>
+          </div>
+          
+          <div className="testimonials-footer">
+            <p className="footer-text">Authentic feedback. Real urban peace.</p>
+          </div>
         </div>
       </div>
     </div>

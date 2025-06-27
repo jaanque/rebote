@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Confetti from 'react-confetti';
 import './App.css';
 import './2-App.css';
 import './WhatIsrebote.css'; // Importar los estilos del nuevo componente
@@ -25,6 +26,8 @@ function App() {
   
   const [selectedMoment, setSelectedMoment] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [confettiEmoji, setConfettiEmoji] = useState('');
 
   const emojiColorMap = {
     '🌿': 'rgba(131, 229, 18, 0.5)', // Green
@@ -64,9 +67,34 @@ function App() {
       answer: "You set your price per moment. Payments are processed securely and deposited to you weekly."
     }
   ];
+
+  const handleSpaceItemClick = (emoji) => {
+    setConfettiEmoji(emoji);
+    setShowConfetti(true);
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 9000);
+  };
   
   return (
     <div className="App">
+      {showConfetti && (
+        <Confetti
+          recycle={false}
+          numberOfPieces={200}
+          drawShape={(ctx) => {
+            const emojiSize = 20; // Font size for the emoji
+            ctx.font = `${emojiSize}px serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            // The particle's origin (0,0) is its center.
+            // fillText draws text with its baseline at y=0 and its start (or center if textAlign='center') at x=0.
+            // To truly center the emoji, we might need a slight adjustment if textBaseline 'middle' isn't perfect for all emojis.
+            ctx.fillText(confettiEmoji, 0, 0); 
+          }}
+          style={{ zIndex: 9999, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }} // Ensure confetti is on top and covers screen
+        />
+      )}
       <div 
         className="App-container"
         style={{
@@ -179,6 +207,7 @@ function App() {
                 key={space.text} 
                 className="space-item" 
                 style={{ boxShadow: `0 0px 500px ${emojiColorMap[space.emoji] || 'rgba(0, 0, 0, 0.1)'}` }}
+                onClick={() => handleSpaceItemClick(space.emoji)}
               >
                 <span className="space-emoji">{space.emoji}</span>
                 <span className="space-text">{space.text}</span>

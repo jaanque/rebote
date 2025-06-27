@@ -88,43 +88,68 @@
 }
 
 .btn {
-  padding: 0;
-  font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font size */
+  /* padding: 0; */ /* Replaced by more specific padding */
+  padding: 0.75em 1.75em; /* Added em-based padding for scalability */
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* Adjusted font size for better balance with padding */
   font-weight: 600;
-  border: none;
-  border-radius: 40px;
+  border: 1px solid transparent; /* Added transparent border to prevent layout shift on hover border add */
+  border-radius: 30px; /* Slightly reduced for a cleaner look, still pill-like */
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: clamp(150px, 40vw, 200px); /* Responsive width */
-  height: clamp(50px, 10vw, 60px);   /* Responsive height */
+  
+  /* More specific transitions */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  
+  min-width: clamp(160px, 35vw, 220px); /* Adjusted width, more flexible with padding */
+  /* height: clamp(50px, 10vw, 60px); */ /* Height will be more content-driven with padding */
+  
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
-  vertical-align: top;
+  line-height: 1.2; /* Adjusted for better text centering with padding */
+  /* vertical-align: top; */ /* Not typically needed with inline-flex & align-items */
   font-family: inherit;
-  letter-spacing: 0;
+  letter-spacing: 0.02em; /* Added subtle letter spacing */
   text-align: center;
+  text-decoration: none; /* Ensure links styled as buttons don't have underlines */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle initial shadow */
 }
+
+.btn:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+.btn:focus, .btn:focus-visible {
+  outline: 2px solid var(--focus-ring-color, #007bff); /* Generic focus ring, can be themed */
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px var(--focus-ring-shadow-color, rgba(0, 123, 255, 0.25)); /* Softer focus shadow */
+}
+
 
 .btn-white {
   background-color: white;
   color: black;
+  border-color: #ccc; /* Subtle border for white button */
 }
 
 .btn-white:hover {
   background-color: #f2f2f2;
+  border-color: #bbb;
 }
 
 .btn-black {
   background-color: black;
   color: white;
+  border-color: black; /* Border consistent with background */
 }
 
 .btn-black:hover {
-  background-color: #111111;
+  background-color: #1a1a1a; /* Slightly lighter black on hover */
+  border-color: #1a1a1a;
 }
+
+/* Removed .description-section, .description-title, .description-text as they appear unused */
 
 .how-it-works-section {
   padding: 4rem 1rem; /* Use rem for padding */
@@ -358,10 +383,7 @@
 
 .space-item:hover {
   background-color: whitesmoke;
-  /* The dynamic box-shadow is now applied directly, so we can remove or adjust the hover shadow. */
-  /* For now, let's slightly enhance the existing shadow or transform the item. */
-  transform: translateY(-2px); /* Example: lift item slightly on hover */
-  /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Optional: if we want a different shadow on hover */
+  transform: translateY(-2px); 
 }
 
 .space-emoji {
@@ -521,6 +543,15 @@
   margin-right: 2px;
 }
 
+/* Styles from 2-App.css for .testimonials-quotes, .testimonial-quote, .quote-text, .stars, .rating-text, .footer-text will be handled during Footer.css merge or if those classes are confirmed to be used elsewhere */
+/* .testimonials-quotes { ... } */
+/* .testimonial-quote { ... } */
+/* .quote-text { ... } */
+/* .stars { ... } */
+/* .rating-text { ... } */
+/* .footer-text { ... } */
+
+
 .overall-rating-summary {
   margin-top: 2rem; /* Use rem */
   padding-top: 1.5rem; /* Use rem */
@@ -538,25 +569,6 @@
   margin-bottom: 2px;
   margin-right: 1px;
   color: #f5a623;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-title {
-    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
-  }
-
-  .testimonials-subtitle {
-    font-size: clamp(0.9rem, 3.5vw, 1.1rem); /* Responsive font size */
-  }
-
-  .testimonial-card {
-    padding: 1.25rem; /* Use rem */
-  }
 }
 
 /* Why rebote Exists Section - Revised for evocative feel */
@@ -652,44 +664,6 @@
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Responsive adjustments for the revised Why rebote Exists section */
-@media (max-width: 992px) {
-  .why-rebote-exists-values-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
-  }
-}
-
-@media (max-width: 768px) {
-  .why-rebote-exists-title {
-    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
-  }
-  .why-rebote-exists-intro,
-  .why-rebote-exists-mission,
-  .why-rebote-exists-credo {
-    font-size: clamp(1rem, 3.5vw, 1.2rem); /* Responsive font size */
-    line-height: 1.75;
-  }
-  .why-rebote-exists-intro {
-    font-size: clamp(1.05rem, 3.8vw, 1.25rem); /* Responsive font size */
-  }
-  .why-rebote-exists-values-container {
-    grid-template-columns: 1fr;
-    gap: 1.25rem; /* Use rem */
-  }
-  .why-rebote-exists-value-item {
-    padding: 1.25rem 1rem; /* Use rem */
-  }
-  .why-rebote-exists-value-title {
-    font-size: clamp(1.05rem, 3.8vw, 1.25rem); /* Responsive font size */
-  }
-  .why-rebote-exists-value-text {
-    font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive font size */
-  }
-  .why-rebote-exists-credo {
-    font-size: clamp(1.05rem, 4vw, 1.3rem); /* Responsive font size */
-  }
 }
 
 /* FAQ Section */
@@ -794,34 +768,663 @@
   color: white;
 }
 
-/* Additional Media Queries for finer control */
+/* -------------------------------------------------- */
+/* MEDIA QUERIES MERGED FROM 2-App.css AND App.css    */
+/* -------------------------------------------------- */
+
+/* Responsive adjustments: Originally from App.css and 2-App.css (max-width: 992px for why-rebote) */
+@media (max-width: 992px) {
+  .why-rebote-exists-values-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
+  }
+}
+
+
+/* Responsive adjustments: Originally from App.css and 2-App.css (max-width: 768px) */
+@media (max-width: 768px) {
+  .logo-container {
+    top: 15px; /* from 2-App.css */
+    left: 20px; /* from 2-App.css */
+    gap: 6px; /* from 2-App.css */
+  }
+  
+  .logo {
+    width: 45px; /* from 2-App.css */
+  }
+  
+  .logo-text {
+    font-size: 1.2rem; /* from 2-App.css */
+  }
+  
+  .title {
+    font-size: 3rem; /* from 2-App.css */
+  }
+  
+  .subtitle {
+    font-size: 1.2rem; /* from 2-App.css */
+  }
+  
+  .button-container {
+    /* .button-container from App.css is column by default, min-width:600px makes it row.
+       2-App.css also sets it to column at max-width:768px, which is consistent. */
+    flex-direction: column; /* from 2-App.css (consistent with base) */
+    gap: 15px; /* from 2-App.css */
+  }
+  
+  .btn {
+    /* App.css uses clamp for responsive width/height. 2-App.css provides fixed values.
+       The explicit width is kept. Height is now determined by padding and line-height. */
+    width: 220px; /* from 2-App.css */
+    /* height: 55px; */ /* from 2-App.css - Removed to allow padding/line-height to control height */
+    /* Padding is inherited from base .btn unless specifically overridden */
+  }
+
+  /* Removed .description-section, .description-title, .description-text media query styles */
+
+  .how-it-works-section {
+    padding: 60px 20px; /* from 2-App.css */
+  }
+  
+  .how-it-works-title {
+    font-size: 2.2rem; /* from 2-App.css */
+  }
+  
+  .how-it-works-subtitle {
+    font-size: 1.1rem; /* from 2-App.css */
+    margin-bottom: 40px; /* from 2-App.css */
+  }
+  
+  .steps-container {
+    /* App.css default is 1fr, @media (min-width: 768px) makes it 3fr.
+       2-App.css @media (max-width: 768px) makes it 1fr, which is consistent. */
+    grid-template-columns: 1fr; /* from 2-App.css (consistent with base) */
+    gap: 30px; /* from 2-App.css */
+  }
+  
+  .moments-section {
+    padding: 60px 20px; /* from 2-App.css */
+  }
+  
+  .moments-container {
+    /* App.css default is column. min-width:992px makes it row.
+       2-App.css @media (max-width: 768px) makes it column, consistent. */
+    flex-direction: column; /* from 2-App.css (consistent with base) */
+    gap: 40px; /* from 2-App.css */
+  }
+  
+  .moments-content {
+    text-align: center; /* from 2-App.css */
+  }
+  
+  .moments-title {
+    /* App.css has clamp(1.8rem, 5vw, 2.5rem) and text-align: center by default.
+       2-App.css sets font-size: 2rem. We'll use the explicit size from 2-App.css */
+    font-size: 2rem; /* from 2-App.css */
+    text-align: center; /* from 2-App.css (consistent with base) */
+  }
+  
+  .moment-item {
+    /* App.css has clamp(1rem, 4vw, 1.3rem). 2-App.css sets font-size: 1.2rem */
+    font-size: 1.2rem; /* from 2-App.css */
+    text-align: left; /* from 2-App.css */
+  }
+  
+  .moments-subtitle {
+    /* App.css has clamp(1.2rem, 4vw, 1.4rem) and text-align: center by default.
+       2-App.css sets font-size: 1.2rem. */
+    font-size: 1.2rem; /* from 2-App.css */
+    text-align: center; /* from 2-App.css (consistent with base) */
+  }
+  
+  .spaces-section {
+    padding: 60px 20px; /* from 2-App.css */
+  }
+  
+  .spaces-title {
+    font-size: 2.2rem; /* from 2-App.css */
+  }
+  
+  .spaces-subtitle {
+    font-size: 1.1rem; /* from 2-App.css */
+    margin-bottom: 40px; /* from 2-App.css */
+  }
+
+  .spaces-grid {
+    /* App.css has repeat(auto-fit, minmax(250px, 1fr)).
+       2-App.css sets grid-template-columns: 1fr. */
+    grid-template-columns: 1fr; /* from 2-App.css */
+    gap: 20px; /* from 2-App.css */
+  }
+  
+  .space-item {
+    padding: 18px 20px; /* from 2-App.css */
+  }
+  
+  .space-text {
+    /* App.css has clamp(0.9rem, 3vw, 1.1rem). 2-App.css sets font-size: 1rem. */
+    font-size: 1rem; /* from 2-App.css */
+  }
+
+  .host-section {
+    /* App.css has padding: 2rem 1rem, margin: 2rem 0, min-height: 300px.
+       2-App.css has padding: 60px 20px, margin: 20px 0, min-height: 350px. */
+    padding: 60px 20px; /* from 2-App.css */
+    margin: 20px 0; /* from 2-App.css */
+    min-height: 350px; /* from 2-App.css */
+  }
+  
+  .host-container {
+    /* App.css has padding: 2rem. 2-App.css has padding: 50px 30px. */
+    padding: 50px 30px; /* from 2-App.css */
+  }
+  
+  .host-title {
+    font-size: 2.2rem; /* from 2-App.css */
+  }
+  
+  .host-subtitle {
+    font-size: 1.1rem; /* from 2-App.css */
+  }
+  
+  .host-description {
+    font-size: 1.1rem; /* from 2-App.css */
+  }
+
+  .testimonials-section {
+    /* App.css has padding: 4rem 1rem. 2-App.css has padding: 60px 20px. */
+    padding: 60px 20px; /* from 2-App.css */
+  }
+
+  .testimonials-grid { /* from App.css */
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-title {
+    /* App.css has clamp(1.8rem, 5vw, 2.5rem). 2-App.css has font-size: 2.2rem. */
+    font-size: 2.2rem; /* from 2-App.css, overrides App.css specific clamp for this breakpoint */
+  }
+
+  .testimonials-subtitle { /* from App.css */
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  }
+
+  .testimonial-card { /* from App.css */
+    padding: 1.25rem;
+  }
+  
+  /* Removed potentially unused classes: .testimonials-quotes, .testimonial-quote, .quote-text, .stars, .rating-text, .footer-text */
+  /* .quote-text might have been intended for .testimonial-text, which is already styled. */
+  /* If these are needed for a sub-component, they would need to be re-added or scoped appropriately. */
+
+  .why-rebote-exists-title { /* from App.css */
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+  .why-rebote-exists-intro,
+  .why-rebote-exists-mission,
+  .why-rebote-exists-credo { /* from App.css */
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    line-height: 1.75;
+  }
+  .why-rebote-exists-intro { /* from App.css */
+    font-size: clamp(1.05rem, 3.8vw, 1.25rem);
+  }
+  .why-rebote-exists-values-container { /* from App.css */
+    grid-template-columns: 1fr;
+    gap: 1.25rem; /* Use rem */
+  }
+  .why-rebote-exists-value-item { /* from App.css */
+    padding: 1.25rem 1rem; /* Use rem */
+  }
+  .why-rebote-exists-value-title { /* from App.css */
+    font-size: clamp(1.05rem, 3.8vw, 1.25rem);
+  }
+  .why-rebote-exists-value-text { /* from App.css */
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
+  .why-rebote-exists-credo { /* from App.css */
+    font-size: clamp(1.05rem, 4vw, 1.3rem);
+  }
+
+  .faq-section {
+    /* App.css has padding: 4rem 1rem. 2-App.css has padding: 60px 20px. */
+    padding: 60px 20px; /* from 2-App.css */
+  }
+
+  .faq-title {
+    /* App.css has clamp(2rem, 6vw, 3rem). 2-App.css has font-size: 2.2rem. */
+    font-size: 2.2rem; /* from 2-App.css */
+    margin-bottom: 40px; /* from 2-App.css */
+  }
+
+  .faq-question {
+    /* App.css has clamp(1.1rem, 4vw, 1.4rem). 2-App.css has font-size: 1.25rem. */
+    font-size: 1.25rem; /* from 2-App.css */
+    padding-right: 25px; /* Adjust space for indicator, from 2-App.css */
+  }
+
+  .faq-question::after {
+    /* App.css has clamp(1.5rem, 5vw, 1.8rem). 2-App.css has font-size: 1.6rem. */
+    font-size: 1.6rem; /* Adjust indicator size, from 2-App.css */
+  }
+
+  .faq-answer {
+    /* App.css has clamp(0.9rem, 3.5vw, 1.1rem). 2-App.css has font-size: 1rem. */
+    font-size: 1rem; /* from 2-App.css */
+  }
+
+  .faq-link {
+    /* App.css has clamp(1rem, 3.5vw, 1.2rem) and padding: 0.5rem 1rem.
+       2-App.css has font-size: 1.1rem and padding: 8px 18px. */
+    font-size: 1.1rem; /* from 2-App.css */
+    padding: 8px 18px; /* from 2-App.css */
+  }
+}
+
+
+/* Additional Media Queries for finer control (max-width: 480px from App.css and 2-App.css) */
 @media (max-width: 480px) {
-  .App {
+  .App { /* from App.css */
     padding: 0.5rem;
   }
-  .App-container {
+  .App-container { /* from App.css */
     min-height: calc(100vh - 1rem);
     padding: 0.5rem;
   }
-  .logo-container {
-    top: 0.5rem;
-    left: 0.8rem;
+  .logo-container { /* from App.css, overridden by 2-App.css */
+    top: 10px; /* from 2-App.css */
+    left: 15px; /* from 2-App.css */
+    gap: 5px; /* from 2-App.css */
   }
-  .content {
+  .logo { /* from 2-App.css */
+    width: 35px;
+  }
+  .logo-text { /* from 2-App.css */
+    font-size: 1rem;
+  }
+  .content { /* from App.css */
     gap: 0.8rem;
   }
-  .button-container {
+  .title { /* from 2-App.css */
+    font-size: 2.5rem;
+  }
+  .subtitle { /* from 2-App.css */
+    font-size: 1.0rem; /* Note: 2-App.css had 1.0rem, App.css clamp likely similar */
+  }
+  .button-container { /* from App.css */
     margin-top: 1rem;
   }
-  .btn {
-    width: clamp(120px, 35vw, 180px);
-    height: clamp(45px, 9vw, 55px);
+  .btn { /* from App.css clamp(120px, 35vw, 180px) width, clamp(45px, 9vw, 55px) height.
+            2-App.css has font-size: 1rem, width: 200px, height: 50px, padding: 0. */
+    font-size: 1rem; /* from 2-App.css - This is fine */
+    padding: 0.75em 1.5em; /* Adjusted from 0 to match new padding scheme, slightly less horizontal than base for smaller buttons */
+    width: 200px; /* from 2-App.css - Explicit width kept */
+    /* height: 50px; */ /* from 2-App.css - Removed to allow padding/line-height to control height */
   }
-  .how-it-works-section, .moments-section, .spaces-section, .host-section, .testimonials-section, .why-rebote-exists-section, .faq-section {
+
+  /* Removed .description-title, .description-text media query styles */
+
+  .how-it-works-section, .moments-section, .spaces-section, .host-section, .testimonials-section, .why-rebote-exists-section, .faq-section { /* from App.css */
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-   .steps-container, .spaces-grid, .testimonials-grid, .why-rebote-exists-values-container {
+   .steps-container, .spaces-grid, .testimonials-grid, .why-rebote-exists-values-container { /* from App.css */
     padding: 0 0.5rem;
   }
+
+  .how-it-works-title { /* from 2-App.css */
+    font-size: 1.8rem;
+  }
+  
+  .how-it-works-subtitle { /* from 2-App.css */
+    font-size: 1rem;
+  }
+  
+  .step-icon svg { /* from 2-App.css */
+    width: 40px;
+    height: 40px;
+  }
+  
+  .step-title { /* from 2-App.css */
+    font-size: 1.2rem; /* App.css clamp(1.2rem, 4vw, 1.4rem) is similar */
+  }
+  
+  .moments-title { /* from 2-App.css */
+    font-size: 1.6rem;
+  }
+  
+  .moment-item { /* from 2-App.css */
+    font-size: 1.1rem;
+  }
+  
+  .moments-subtitle { /* from 2-App.css */
+    font-size: 1.1rem;
+  }
+  
+  .spaces-title { /* from 2-App.css */
+    font-size: 1.8rem;
+  }
+  
+  .spaces-subtitle { /* from 2-App.css */
+    font-size: 1rem;
+  }
+  
+  .space-item { /* from 2-App.css */
+    padding: 15px 18px;
+  }
+  
+  .space-emoji { /* from 2-App.css */
+    font-size: 1.3rem; /* App.css clamp(1.2rem, 4vw, 1.5rem) is similar */
+  }
+  
+  .space-text { /* from 2-App.css */
+    font-size: 0.95rem; /* App.css clamp(0.9rem, 3vw, 1.1rem) is similar */
+  }
+  
+  .host-section { /* from 2-App.css, App.css has margin: 2rem 0, min-height: 300px */
+    margin: 15px 0; /* from 2-App.css */
+    min-height: 300px; /* from 2-App.css, consistent with App.css base */
+  }
+  
+  .host-container { /* from 2-App.css, App.css has padding: 2rem */
+    padding: 40px 20px; /* from 2-App.css */
+  }
+  
+  .host-title { /* from 2-App.css */
+    font-size: 1.8rem;
+  }
+  
+  .host-subtitle { /* from 2-App.css */
+    font-size: 1rem;
+  }
+  
+  .host-description { /* from 2-App.css */
+    font-size: 1rem;
+  }
+
+  .testimonials-title { /* from 2-App.css */
+    font-size: 1.8rem; /* Overrides App.css specific clamp for 768px */
+  }
+  
+  /* Removed .quote-text, .stars, .rating-text, .footer-text from this media query */
+
+  .faq-title { /* from 2-App.css */
+    font-size: 1.8rem; /* Overrides App.css specific clamp for 768px */
+    margin-bottom: 30px; /* from 2-App.css */
+  }
+
+  .faq-question { /* from 2-App.css */
+    font-size: 1.1rem; /* Overrides App.css specific clamp for 768px */
+    padding-right: 20px; /* Further adjust space for indicator, from 2-App.css */
+  }
+
+  .faq-question::after { /* from 2-App.css */
+    font-size: 1.5rem; /* Further adjust indicator size, from 2-App.css */
+  }
+
+  .faq-answer { /* from 2-App.css */
+    font-size: 0.95rem; /* Overrides App.css specific clamp for 768px */
+  }
+
+  .faq-link { /* from 2-App.css */
+    font-size: 1rem; /* Overrides App.css specific clamp for 768px */
+    padding: 7px 15px; /* from 2-App.css */
+  }
 }
+
+/* --- WhatIsrebote.css content START --- */
+.what-is-rebote-section {
+  padding: 4rem 1rem; /* Use rem for padding */
+  text-align: center;
+}
+
+.what-is-rebote-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.what-is-rebote-title {
+  color: #333;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 1.25rem; /* Use rem */
+  line-height: 1.2;
+}
+
+.what-is-rebote-description {
+  color: #555;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
+  line-height: 1.7;
+  margin-bottom: 2rem; /* Use rem */
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.what-is-rebote-highlights {
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  align-items: center; /* Center items in column layout */
+  gap: 2rem; /* Use rem */
+  margin-top: 1.5rem; /* Use rem */
+}
+
+@media (min-width: 768px) {
+  .what-is-rebote-highlights {
+    flex-direction: row; /* Row layout for larger screens */
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.5rem; /* Use rem */
+  }
+}
+
+.highlight-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* Use rem */
+  max-width: 100%; /* Allow full width in column layout */
+}
+
+@media (min-width: 768px) {
+  .highlight-item {
+    max-width: 250px; /* Restore max-width for row layout */
+  }
+}
+
+.highlight-icon {
+  font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
+  color: #333;
+}
+
+.highlight-item p {
+  color: #666;
+  font-size: clamp(0.9rem, 3vw, 1.1rem); /* Responsive font size */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive adjustments from original file (merged and refined) */
+@media (max-width: 768px) {
+  /* .what-is-rebote-title is already responsive with clamp */
+  /* .what-is-rebote-description is already responsive with clamp */
+  /* .what-is-rebote-highlights is already set to column and centered */
+
+  /* .highlight-item max-width is already 100% for smaller screens */
+  /* .highlight-icon is already responsive with clamp */
+  /* .highlight-item p is already responsive with clamp */
+}
+
+@media (max-width: 480px) {
+  .what-is-rebote-section {
+    padding: 3rem 0.8rem; /* Adjust padding for very small screens */
+  }
+  /* Title, description, icon, and text are handled by clamp() */
+}
+/* --- WhatIsrebote.css content END --- */
+
+/* --- Footer.css content START --- */
+.footer {
+    border: 1px solid #5b5a5a;
+    border-radius: 20px;
+  background-color: white;
+  color: #000;
+  padding: 3rem 1rem 1rem; /* Use rem for padding */
+  /* font-family will be inherited from body (index.css) */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted minmax for better fit */
+  gap: 2rem; /* Use rem */
+  margin-bottom: 2rem; /* Use rem */
+}
+
+.footer-section {
+  min-width: 0; /* Allow sections to shrink below 200px if needed on very small screens */
+}
+
+.footer-heading {
+  font-size: clamp(1.5rem, 5vw, 2rem); /* Responsive font size */
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem; /* Use rem */
+  text-transform: lowercase;
+}
+
+.footer-tagline {
+  font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive font size */
+  font-style: italic;
+  color: #000;
+  margin-bottom: 1rem; /* Use rem */
+}
+
+.footer-subheading {
+  font-size: clamp(1rem, 4vw, 1.2rem); /* Responsive font size */
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.8rem; /* Use rem */
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 0.4rem; /* Use rem */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem; /* Use rem */
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem); /* Responsive font size */
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.footer-socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem; /* Use rem */
+}
+
+.footer-socials a {
+  color: #333;
+  font-size: clamp(1.1rem, 4vw, 1.3rem); /* Responsive font size */
+  text-decoration: none;
+  width: clamp(35px, 8vw, 40px); /* Responsive width */
+  height: clamp(35px, 8vw, 40px); /* Responsive height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #34495e;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: #f2f2f2;
+  color: #2c3e50;
+  border-color: #f2f2f2;
+}
+
+.footer-section p {
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem); /* Responsive font size */
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 0.4rem; /* Use rem */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem; /* Use rem */
+  border-top: 1px solid #34495e;
+  margin-top: 1rem; /* Use rem */
+}
+
+.footer-bottom p {
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem); /* Responsive font size */
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Further adjust minmax for smaller screens */
+    gap: 1.5rem; /* Use rem */
+  }
+
+  .footer-heading {
+    font-size: clamp(1.3rem, 4.5vw, 1.8rem); /* Responsive font size */
+  }
+
+  .footer-subheading {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem); /* Responsive font size */
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0.8rem 0.8rem; /* Adjust padding for very small screens */
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Consistent gap */
+  }
+  
+  .footer-section {
+    margin-bottom: 1rem; /* Use rem */
+    text-align: left; /* Align text to left for better readability in single column */
+  }
+   .footer-socials {
+    justify-content: flex-start; /* Align socials to left */
+  }
+
+  .footer-heading {
+    font-size: clamp(1.2rem, 5vw, 1.6rem); /* Responsive font size */
+  }
+   .footer-bottom {
+    text-align: left; /* Align bottom text to left */
+  }
+}
+/* --- Footer.css content END --- */

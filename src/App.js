@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Confetti from 'react-confetti';
 import './App.css';
-import './2-App.css';
-import './WhatIsrebote.css'; // Importar los estilos del nuevo componente
+// import './2-App.css'; // Merged into App.css
+// import './WhatIsrebote.css'; // Merged into App.css
 import Footer from './footer.js';
 import WhatIsrebote from './WhatIsrebote.js';
 

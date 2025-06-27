@@ -227,6 +227,32 @@ function App() {
           </div>
         </div>
       </div>
+
+      <div className="why-bello-exists-section">
+        <div className="why-bello-exists-container">
+          <h2 className="why-bello-exists-title">Why Bello Whispers to the City</h2>
+          <p className="why-bello-exists-intro">In the heart of the urban rush, amidst the symphony of a thousand lives lived at full speed, lies a yearning. A quiet call for a pause. A space to simply *be*.</p>
+          <p className="why-bello-exists-mission">Bello was born from this yearning. We are the city's gentle exhale, a reminder that tranquility isn't a distant dream, but a nearby breath. Our mission is to weave moments of peace into the urban fabric, helping you find your center, even as the world spins on.</p>
+          <div className="why-bello-exists-values-container">
+            <div className="why-bello-exists-value-item">
+              <span className="why-bello-exists-value-icon">🌸</span>
+              <h3 className="why-bello-exists-value-title">Beauty in the Everyday</h3>
+              <p className="why-bello-exists-value-text">We seek the quiet corners, the sunlit nooks, the unexpected vistas – proving that beauty is always within reach.</p>
+            </div>
+            <div className="why-bello-exists-value-item">
+              <span className="why-bello-exists-value-icon">⏳</span>
+              <h3 className="why-bello-exists-value-title">The Gift of Immediacy</h3>
+              <p className="why-bello-exists-value-text">Your moment of calm shouldn't wait. Bello offers an instant escape, a readily available sanctuary.</p>
+            </div>
+            <div className="why-bello-exists-value-item">
+              <span className="why-bello-exists-value-icon">🌿</span>
+              <h3 className="why-bello-exists-value-title">Wellness, Woven In</h3>
+              <p className="why-bello-exists-value-text">More than just a space, it's a chance to recharge, to find clarity, to nurture your inner well-being.</p>
+            </div>
+          </div>
+          <p className="why-bello-exists-credo">Because peace isn’t a luxury for the weekend. It’s a necessity, just a few steps away. <br/>This is Bello. Your city, re-imagined.</p>
+        </div>
+      </div>
     </div>
     
   );

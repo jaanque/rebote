@@ -432,7 +432,6 @@
 }
 
 .testimonial-card {
-  transition: 1s;
   border: 1px solid #5b5a5a; /* Borde sutil */
   border-radius: 15px;
   padding: 30px;
@@ -445,8 +444,7 @@
 }
 
 .testimonial-card:hover {
-  transition: 1s;
-  border: 1.5px solid #000; /* Borde más prominente al pasar el mouse */
+  border: 1px solid #000; /* Borde más prominente al pasar el mouse */
 }
 
 .testimonial-card-content {
@@ -508,5 +506,138 @@
 
   .testimonial-card {
     padding: 25px;
+  }
+}
+
+/* Why Bello Exists Section - Revised for evocative feel */
+.why-bello-exists-section {
+  padding: 100px 20px;
+}
+
+.why-bello-exists-container {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-bello-exists-title {
+  color: #2c3e50; /* Deep, thoughtful blue-grey */
+  font-size: 2.9rem; /* Refined size */
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.35;
+}
+
+.why-bello-exists-intro {
+  color: #4a5568; /* Softer, elegant grey */
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.85;
+  margin-bottom: 45px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-bello-exists-mission {
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-bello-exists-values-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 35px; /* Adjusted gap */
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.why-bello-exists-value-item {
+  padding: 30px 25px; /* More padding */
+  border-radius: 15px; /* Softer radius */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid #5b5a5a; /* Subtle border for definition */
+}
+
+.why-bello-exists-value-item:hover {
+  border: 1px solid #000;
+}
+
+.why-bello-exists-value-icon {
+  font-size: 2.2rem; /* Slightly larger icon */
+  display: block;
+  margin-bottom: 18px;
+  color: #5dade2; /* A gentle, inspiring blue */
+  text-align: center; /* Center icon within its block */
+}
+
+.why-bello-exists-value-title {
+  color: #2c3e50; /* Consistent with main title color */
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center; /* Center title */
+}
+
+.why-bello-exists-value-text {
+  color: #5a6878; /* Readable grey */
+  font-size: 1.05rem; /* Adjusted size */
+  line-height: 1.65;
+  text-align: center; /* Center text */
+}
+
+.why-bello-exists-credo {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  line-height: 1.9;
+  margin-top: 60px;
+  font-style: italic;
+  font-weight: 500; /* Slightly bolder for emphasis */
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive adjustments for the revised Why Bello Exists section */
+@media (max-width: 992px) { /* Adjust breakpoint for values grid */
+  .why-bello-exists-values-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Allow more space before stacking to 1 col */
+  }
+}
+
+@media (max-width: 768px) {
+  .why-bello-exists-title {
+    font-size: 2.5rem;
+  }
+  .why-bello-exists-intro,
+  .why-bello-exists-mission,
+  .why-bello-exists-credo {
+    font-size: 1.2rem; /* Keep it readable on mobile */
+    line-height: 1.75;
+  }
+  .why-bello-exists-intro {
+    font-size: 1.25rem;
+  }
+  .why-bello-exists-values-container {
+    grid-template-columns: 1fr; /* Single column for values */
+    gap: 25px;
+  }
+  .why-bello-exists-value-item {
+    padding: 25px 20px;
+  }
+  .why-bello-exists-value-title {
+    font-size: 1.25rem;
+  }
+  .why-bello-exists-value-text {
+    font-size: 1rem;
+  }
+  .why-bello-exists-credo {
+    font-size: 1.3rem;
   }
 }

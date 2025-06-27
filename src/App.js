@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 import './2-App.css';
-import './WhatIsBello.css'; // Importar los estilos del nuevo componente
+import './WhatIsrebote.css'; // Importar los estilos del nuevo componente
 import Footer from './footer.js';
-import WhatIsBello from './WhatIsBello.js';
+import WhatIsrebote from './WhatIsrebote.js';
 
 function App() {
   const imageUrl = "https://i.ibb.co/SwQF8smr/assets-task-01jyp74gvkf7vtdapm143gsw99-1750945157-img-0.webp";
@@ -64,10 +64,10 @@ function App() {
         <div className="logo-container">
           <img 
             src="https://i.ibb.co/5h0gxHqT/Dise-o-sin-t-tulo-2-removebg-preview.png" 
-            alt="Bello Logo" 
+            alt="rebote Logo" 
             className="logo"
           />
-          <span className="logo-text">bello</span>
+          <span className="logo-text">Rebote</span>
         </div>
         <div className="content">
           <h1 className="title">Own the moment</h1>
@@ -79,10 +79,10 @@ function App() {
         </div>
       </div>
       
-      <WhatIsBello />
+      <WhatIsrebote />
 
       <div className="how-it-works-section">
-        <h2 className="how-it-works-title">How Bello works</h2>
+        <h2 className="how-it-works-title">How rebote works</h2>
         <p className="how-it-works-subtitle">It only takes a moment.</p>
         
         <div className="steps-container">
@@ -124,12 +124,12 @@ function App() {
           <div className="moments-image">
             <img 
               src={moments[selectedMoment].image}
-              alt="Moments Made for Bello" 
+              alt="Moments Made for rebote" 
               className="moments-img"
             />
           </div>
           <div className="moments-content">
-            <h2 className="moments-title"><strong>Moments Made for Bello</strong></h2>
+            <h2 className="moments-title"><strong>Moments Made for rebote</strong></h2>
             <ul className="moments-list">
               {moments.map((moment, index) => (
                 <li 
@@ -216,7 +216,7 @@ function App() {
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <div className="testimonial-card-content">
-                <p className="testimonial-text">"Bello's rooftop saved my mental sanity."</p>
+                <p className="testimonial-text">"rebote's rooftop saved my mental sanity."</p>
                 <p className="testimonial-author">- Alex P.</p>
               </div>
               <div className="testimonial-rating">
@@ -238,7 +238,7 @@ function App() {
             </div>
             <div className="testimonial-card">
               <div className="testimonial-card-content">
-                <p className="testimonial-text">"Finally, a way to find quick escapes. Bello is a game changer."</p>
+                <p className="testimonial-text">"Finally, a way to find quick escapes. rebote is a game changer."</p>
                 <p className="testimonial-author">- Sam T.</p>
               </div>
               <div className="testimonial-rating">
@@ -261,29 +261,29 @@ function App() {
         </div>
       </div>
 
-      <div className="why-bello-exists-section">
-        <div className="why-bello-exists-container">
-          <h2 className="why-bello-exists-title">Why Bello Whispers to the City</h2>
-          <p className="why-bello-exists-intro">In the heart of the urban rush, amidst the symphony of a thousand lives lived at full speed, lies a yearning. A quiet call for a pause. A space to simply *be*.</p>
-          <p className="why-bello-exists-mission">Bello was born from this yearning. We are the city's gentle exhale, a reminder that tranquility isn't a distant dream, but a nearby breath. Our mission is to weave moments of peace into the urban fabric, helping you find your center, even as the world spins on.</p>
-          <div className="why-bello-exists-values-container">
-            <div className="why-bello-exists-value-item">
-              <span className="why-bello-exists-value-icon">🌸</span>
-              <h3 className="why-bello-exists-value-title">Beauty in the Everyday</h3>
-              <p className="why-bello-exists-value-text">We seek the quiet corners, the sunlit nooks, the unexpected vistas – proving that beauty is always within reach.</p>
+      <div className="why-rebote-exists-section">
+        <div className="why-rebote-exists-container">
+          <h2 className="why-rebote-exists-title">Why rebote Whispers to the City</h2>
+          <p className="why-rebote-exists-intro">In the heart of the urban rush, amidst the symphony of a thousand lives lived at full speed, lies a yearning. A quiet call for a pause. A space to simply *be*.</p>
+          <p className="why-rebote-exists-mission">rebote was born from this yearning. We are the city's gentle exhale, a reminder that tranquility isn't a distant dream, but a nearby breath. Our mission is to weave moments of peace into the urban fabric, helping you find your center, even as the world spins on.</p>
+          <div className="why-rebote-exists-values-container">
+            <div className="why-rebote-exists-value-item">
+              <span className="why-rebote-exists-value-icon">🌸</span>
+              <h3 className="why-rebote-exists-value-title">Beauty in the Everyday</h3>
+              <p className="why-rebote-exists-value-text">We seek the quiet corners, the sunlit nooks, the unexpected vistas – proving that beauty is always within reach.</p>
             </div>
-            <div className="why-bello-exists-value-item">
-              <span className="why-bello-exists-value-icon">⏳</span>
-              <h3 className="why-bello-exists-value-title">The Gift of Immediacy</h3>
-              <p className="why-bello-exists-value-text">Your moment of calm shouldn't wait. Bello offers an instant escape, a readily available sanctuary.</p>
+            <div className="why-rebote-exists-value-item">
+              <span className="why-rebote-exists-value-icon">⏳</span>
+              <h3 className="why-rebote-exists-value-title">The Gift of Immediacy</h3>
+              <p className="why-rebote-exists-value-text">Your moment of calm shouldn't wait. rebote offers an instant escape, a readily available sanctuary.</p>
             </div>
-            <div className="why-bello-exists-value-item">
-              <span className="why-bello-exists-value-icon">🌿</span>
-              <h3 className="why-bello-exists-value-title">Wellness, Woven In</h3>
-              <p className="why-bello-exists-value-text">More than just a space, it's a chance to recharge, to find clarity, to nurture your inner well-being.</p>
+            <div className="why-rebote-exists-value-item">
+              <span className="why-rebote-exists-value-icon">🌿</span>
+              <h3 className="why-rebote-exists-value-title">Wellness, Woven In</h3>
+              <p className="why-rebote-exists-value-text">More than just a space, it's a chance to recharge, to find clarity, to nurture your inner well-being.</p>
             </div>
           </div>
-          <p className="why-bello-exists-credo">Because peace isn’t a luxury for the weekend. It’s a necessity, just a few steps away. <br/>This is Bello. Your city, re-imagined.</p>
+          <p className="why-rebote-exists-credo">Because peace isn’t a luxury for the weekend. It’s a necessity, just a few steps away. <br/>This is rebote. Your city, re-imagined.</p>
         </div>
       </div>
 

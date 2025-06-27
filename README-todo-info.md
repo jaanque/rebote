@@ -1,12 +1,12 @@
-Bello – Landing Page Script (Full Detail)
+rebote – Landing Page Script (Full Detail)
 
 🎯 Hero Section (Above the fold)
 
-Logo + Name: BelloMain H1: Own the momentSubtext (H2/H3): Find spaces to pause, breathe and reboot anywhere, instantly.Primary CTA: Find a spaceSecondary CTA: Host your spaceVisual Cue: Background image/video with a peaceful, urban escape
+Logo + Name: reboteMain H1: Own the momentSubtext (H2/H3): Find spaces to pause, breathe and reboot anywhere, instantly.Primary CTA: Find a spaceSecondary CTA: Host your spaceVisual Cue: Background image/video with a peaceful, urban escape
 
-🔧 How Bello Works (3 Steps)
+🔧 How rebote Works (3 Steps)
 
-How Bello works
+How rebote works
 
 Step 1: Find a space nearby → map view, filters (time, vibe, type)
 
@@ -16,7 +16,7 @@ Step 3: Pause, breathe, reset → QR/code access
 
 💡 Use Cases / Moments
 
-Moments made for Bello
+Moments made for rebote
 
 "20 minutes before my meeting."
 
@@ -68,7 +68,7 @@ Share your space for just 15–60 minutes. Earn and help someone reset.CTA: Ho
 
 Loved by our early users
 
-“Bello’s rooftop saved my mental sanity.”
+“rebote’s rooftop saved my mental sanity.”
 
 “A minute on that balcony changed my mood.”
 
@@ -110,7 +110,7 @@ Apple/Google Pay support
 
 ❤️ About / Why We Exist
 
-Why Bello
+Why rebote
 
 Mission: Reconnect with yourself and the city
 
@@ -138,7 +138,7 @@ How do hosts earn?
 
 Take back your time
 
-Breathe where you are.CTA: Download BelloSub-CTA: Join waitlist
+Breathe where you are.CTA: Download reboteSub-CTA: Join waitlist
 
 📜 Footer
 
@@ -148,13 +148,13 @@ App Store / Google Play badges
 
 Social icons: Instagram, Twitter, Facebook
 
-Legal: ©2025 Bello, Inc.
+Legal: ©2025 rebote, Inc.
 
 🛠 Metadata & SEO
 
-<title>: Bello – Book micro‑spaces to breathe
+<title>: rebote – Book micro‑spaces to breathe
 
-<meta description>: Find and book hidden urban spots for 15–60 minutes: balconies, gardens, rooftops. Pause and reset your day with Bello.
+<meta description>: Find and book hidden urban spots for 15–60 minutes: balconies, gardens, rooftops. Pause and reset your day with rebote.
 
 OG tags: dynamic image of balcony, cityscape or peaceful escape
 
@@ -202,7 +202,7 @@ Cities
 
 Feature grid
 
-Why Bello
+Why rebote
 
 FAQ
 

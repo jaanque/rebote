@@ -557,18 +557,18 @@
   }
 }
 
-/* Why Bello Exists Section - Revised for evocative feel */
-.why-bello-exists-section {
+/* Why rebote Exists Section - Revised for evocative feel */
+.why-rebote-exists-section {
   padding: 5rem 1rem; /* Use rem */
 }
 
-.why-bello-exists-container {
+.why-rebote-exists-container {
   max-width: 950px;
   margin: 0 auto;
   text-align: center;
 }
 
-.why-bello-exists-title {
+.why-rebote-exists-title {
   color: #2c3e50;
   font-size: clamp(1.8rem, 5.5vw, 2.9rem); /* Responsive font size */
   font-weight: 700;
@@ -576,7 +576,7 @@
   line-height: 1.35;
 }
 
-.why-bello-exists-intro {
+.why-rebote-exists-intro {
   color: #4a5568;
   font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   font-style: italic;
@@ -587,7 +587,7 @@
   margin-right: auto;
 }
 
-.why-bello-exists-mission {
+.why-rebote-exists-mission {
   color: #333;
   font-size: clamp(1rem, 3.5vw, 1.2rem); /* Responsive font size */
   line-height: 1.8;
@@ -597,7 +597,7 @@
   margin-right: auto;
 }
 
-.why-bello-exists-values-container {
+.why-rebote-exists-values-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.75rem; /* Use rem */
@@ -606,18 +606,18 @@
   text-align: left;
 }
 
-.why-bello-exists-value-item {
+.why-rebote-exists-value-item {
   padding: 1.5rem 1.25rem; /* Use rem */
   border-radius: 15px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   border: 1px solid #5b5a5a;
 }
 
-.why-bello-exists-value-item:hover {
+.why-rebote-exists-value-item:hover {
   border: 1px solid #000;
 }
 
-.why-bello-exists-value-icon {
+.why-rebote-exists-value-icon {
   font-size: clamp(1.8rem, 5vw, 2.2rem); /* Responsive font size */
   display: block;
   margin-bottom: 1rem; /* Use rem */
@@ -625,7 +625,7 @@
   text-align: center;
 }
 
-.why-bello-exists-value-title {
+.why-rebote-exists-value-title {
   color: #2c3e50;
   font-size: clamp(1.1rem, 4vw, 1.35rem); /* Responsive font size */
   font-weight: 600;
@@ -633,14 +633,14 @@
   text-align: center;
 }
 
-.why-bello-exists-value-text {
+.why-rebote-exists-value-text {
   color: #5a6878;
   font-size: clamp(0.9rem, 3vw, 1.05rem); /* Responsive font size */
   line-height: 1.65;
   text-align: center;
 }
 
-.why-bello-exists-credo {
+.why-rebote-exists-credo {
   color: #2c3e50;
   font-size: clamp(1.1rem, 4.5vw, 1.4rem); /* Responsive font size */
   line-height: 1.9;
@@ -652,40 +652,40 @@
   margin-right: auto;
 }
 
-/* Responsive adjustments for the revised Why Bello Exists section */
+/* Responsive adjustments for the revised Why rebote Exists section */
 @media (max-width: 992px) {
-  .why-bello-exists-values-container {
+  .why-rebote-exists-values-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
   }
 }
 
 @media (max-width: 768px) {
-  .why-bello-exists-title {
+  .why-rebote-exists-title {
     font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
   }
-  .why-bello-exists-intro,
-  .why-bello-exists-mission,
-  .why-bello-exists-credo {
+  .why-rebote-exists-intro,
+  .why-rebote-exists-mission,
+  .why-rebote-exists-credo {
     font-size: clamp(1rem, 3.5vw, 1.2rem); /* Responsive font size */
     line-height: 1.75;
   }
-  .why-bello-exists-intro {
+  .why-rebote-exists-intro {
     font-size: clamp(1.05rem, 3.8vw, 1.25rem); /* Responsive font size */
   }
-  .why-bello-exists-values-container {
+  .why-rebote-exists-values-container {
     grid-template-columns: 1fr;
     gap: 1.25rem; /* Use rem */
   }
-  .why-bello-exists-value-item {
+  .why-rebote-exists-value-item {
     padding: 1.25rem 1rem; /* Use rem */
   }
-  .why-bello-exists-value-title {
+  .why-rebote-exists-value-title {
     font-size: clamp(1.05rem, 3.8vw, 1.25rem); /* Responsive font size */
   }
-  .why-bello-exists-value-text {
+  .why-rebote-exists-value-text {
     font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive font size */
   }
-  .why-bello-exists-credo {
+  .why-rebote-exists-credo {
     font-size: clamp(1.05rem, 4vw, 1.3rem); /* Responsive font size */
   }
 }
@@ -815,11 +815,11 @@
     width: clamp(120px, 35vw, 180px);
     height: clamp(45px, 9vw, 55px);
   }
-  .how-it-works-section, .moments-section, .spaces-section, .host-section, .testimonials-section, .why-bello-exists-section, .faq-section {
+  .how-it-works-section, .moments-section, .spaces-section, .host-section, .testimonials-section, .why-rebote-exists-section, .faq-section {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-   .steps-container, .spaces-grid, .testimonials-grid, .why-bello-exists-values-container {
+   .steps-container, .spaces-grid, .testimonials-grid, .why-rebote-exists-values-container {
     padding: 0 0.5rem;
   }
 }

@@ -1,14 +1,14 @@
-.what-is-bello-section {
+.what-is-rebote-section {
   padding: 4rem 1rem; /* Use rem for padding */
   text-align: center;
 }
 
-.what-is-bello-container {
+.what-is-rebote-container {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.what-is-bello-title {
+.what-is-rebote-title {
   color: #333;
   font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   font-weight: 700;
@@ -16,7 +16,7 @@
   line-height: 1.2;
 }
 
-.what-is-bello-description {
+.what-is-rebote-description {
   color: #555;
   font-size: clamp(1rem, 4vw, 1.3rem); /* Responsive font size */
   line-height: 1.7;
@@ -26,7 +26,7 @@
   margin-right: auto;
 }
 
-.what-is-bello-highlights {
+.what-is-rebote-highlights {
   display: flex;
   flex-direction: column; /* Default to column for mobile */
   align-items: center; /* Center items in column layout */
@@ -35,7 +35,7 @@
 }
 
 @media (min-width: 768px) {
-  .what-is-bello-highlights {
+  .what-is-rebote-highlights {
     flex-direction: row; /* Row layout for larger screens */
     justify-content: space-around;
     align-items: flex-start;
@@ -72,9 +72,9 @@
 
 /* Responsive adjustments from original file (merged and refined) */
 @media (max-width: 768px) {
-  /* .what-is-bello-title is already responsive with clamp */
-  /* .what-is-bello-description is already responsive with clamp */
-  /* .what-is-bello-highlights is already set to column and centered */
+  /* .what-is-rebote-title is already responsive with clamp */
+  /* .what-is-rebote-description is already responsive with clamp */
+  /* .what-is-rebote-highlights is already set to column and centered */
 
   /* .highlight-item max-width is already 100% for smaller screens */
   /* .highlight-icon is already responsive with clamp */
@@ -82,7 +82,7 @@
 }
 
 @media (max-width: 480px) {
-  .what-is-bello-section {
+  .what-is-rebote-section {
     padding: 3rem 0.8rem; /* Adjust padding for very small screens */
   }
   /* Title, description, icon, and text are handled by clamp() */

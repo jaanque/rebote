@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import './2-App.css';
+import Footer from './footer.js';
 
 function App() {
   const imageUrl = "https://i.ibb.co/SwQF8smr/assets-task-01jyp74gvkf7vtdapm143gsw99-1750945157-img-0.webp";
@@ -303,6 +304,7 @@ function App() {
           <a href="#" className="faq-link">View full FAQ →</a>
         </div>
       </div>
+      <Footer />
     </div>
     
   );

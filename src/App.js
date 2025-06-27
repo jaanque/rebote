@@ -178,23 +178,52 @@ function App() {
       <div className="testimonials-section">
         <div className="testimonials-container">
           <h2 className="testimonials-title">Loved by Early Users</h2>
+          <p className="testimonials-subtitle">Authentic feedback. Real urban peace.</p>
           
-          <div className="testimonials-quotes">
-            <div className="testimonial-quote">
-              <p className="quote-text">"Bello's rooftop saved my mental sanity."</p>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="testimonial-card-content">
+                <p className="testimonial-text">"Bello's rooftop saved my mental sanity."</p>
+                <p className="testimonial-author">- Alex P.</p>
+              </div>
+              <div className="testimonial-rating">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="star-icon"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                ))}
+              </div>
             </div>
-            <div className="testimonial-quote">
-              <p className="quote-text">"A minute on that balcony changed my mood."</p>
+            <div className="testimonial-card">
+              <div className="testimonial-card-content">
+                <p className="testimonial-text">"A minute on that balcony changed my mood. Essential for city living!"</p>
+                <p className="testimonial-author">- Maria K.</p>
+              </div>
+              <div className="testimonial-rating">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="star-icon"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                ))}
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="testimonial-card-content">
+                <p className="testimonial-text">"Finally, a way to find quick escapes. Bello is a game changer."</p>
+                <p className="testimonial-author">- Sam T.</p>
+              </div>
+              <div className="testimonial-rating">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="star-icon"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                ))}
+              </div>
             </div>
           </div>
           
-          <div className="testimonials-rating">
-            <div className="stars">⭐⭐⭐⭐⭐</div>
-            <p className="rating-text">Rated by our first 1000 users</p>
-          </div>
-          
-          <div className="testimonials-footer">
-            <p className="footer-text">Authentic feedback. Real urban peace.</p>
+          <div className="overall-rating-summary">
+            <p className="overall-rating-text">
+              <strong>Overall rating:ㅤ</strong> 
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="star-icon inline-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+              ㅤbased on 1000+ users
+            </p>
           </div>
         </div>
       </div>

@@ -399,11 +399,11 @@
 /* Sección de testimonios */
 .testimonials-section {
   padding: 80px 20px;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* Fondo más limpio */
 }
 
 .testimonials-container {
-  max-width: 800px;
+  max-width: 1100px; /* Aumentar el ancho máximo para el diseño de grid */
   margin: 0 auto;
   text-align: center;
 }
@@ -412,62 +412,101 @@
   color: #333;
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 15px; /* Reducir margen inferior */
   line-height: 1.2;
 }
 
-.testimonials-quotes {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.testimonial-quote {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  max-width: 350px;
-}
-
-.quote-emoji {
-  font-size: 1.5rem;
-  min-width: 24px;
-}
-
-.quote-text {
+.testimonials-subtitle {
   color: #666;
   font-size: 1.3rem;
   font-style: italic;
-  margin: 0;
+  margin-bottom: 50px; /* Aumentar margen para separar del grid */
+  font-weight: 400;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsive */
+  gap: 30px; /* Espacio entre tarjetas */
+  margin-bottom: 50px;
+}
+
+.testimonial-card {
+  transition: 1s;
+  border: 1px solid #5b5a5a; /* Borde sutil */
+  border-radius: 15px;
+  padding: 30px;
   text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Para alinear el rating abajo */
 }
 
-.testimonials-rating {
-  margin-bottom: 30px;
+.testimonial-card:hover {
+  transition: 1s;
+  border: 1.5px solid #000; /* Borde más prominente al pasar el mouse */
 }
 
-.stars {
-  font-size: 2rem;
+.testimonial-card-content {
+  margin-bottom: 20px; /* Espacio entre texto y rating */
+}
+
+.testimonial-text {
+  color: #555;
+  font-size: 1.1rem; /* Tamaño de fuente ajustado */
+  font-style: italic;
+  line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.rating-text {
+.testimonial-author {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.testimonial-rating .star-icon {
+  color: #f5a623; /* Color para estrellas */
+  margin-right: 2px; /* Pequeño espacio entre estrellas */
+}
+
+.overall-rating-summary {
+  margin-top: 40px;
+  padding-top: 30px;
+}
+
+.overall-rating-text {
   color: #333;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
 }
 
-.testimonials-footer {
-  margin-top: 30px;
+.overall-rating-text .star-icon.inline-star {
+  vertical-align: middle; /* Alinear estrellas con el texto */
+  margin-bottom: 2px; /* Ajuste fino de alineación vertical */
+  margin-right: 1px;
+  color: #f5a623;
 }
 
-.footer-text {
-  color: #666;
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin: 0;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+  }
+
+  .testimonials-title {
+    font-size: 2.5rem;
+  }
+
+  .testimonials-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-card {
+    padding: 25px;
+  }
 }

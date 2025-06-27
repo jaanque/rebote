@@ -26,6 +26,18 @@ function App() {
   const [selectedMoment, setSelectedMoment] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
+  const emojiColorMap = {
+    '🌿': 'rgba(131, 229, 18, 0.5)', // Green
+    '🌇': 'rgba(255, 123, 0, 0.5)', // Orange
+    '🌼': 'rgba(255, 208, 0, 0.5)',  // Yellow
+    '🛋️': 'rgba(255, 89, 0, 0.5)',// Brown
+    '📖': 'rgba(0, 47, 255, 0.5)',  // Blue
+    '💤': 'rgba(0, 132, 255, 0.5)', // Light Blue
+    '⛵': 'rgba(255, 179, 0, 0.5)',  // Blue
+    '🎨': 'rgba(255, 217, 0, 0.5)',   // Red
+    '🎪': 'rgba(255, 0, 85, 0.5)'   // Yellow
+  };
+
   const faqData = [
     {
       question: "What types of spaces are available?",
@@ -152,42 +164,26 @@ function App() {
           <p className="spaces-subtitle">Browse real places shared by hosts across the city:</p>
           
           <div className="spaces-grid">
-            <div className="space-item">
-              <span className="space-emoji">🌿</span>
-              <span className="space-text">Balconies with plants</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">🌇</span>
-              <span className="space-text">Rooftops with views</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">🌼</span>
-              <span className="space-text">Garden corners</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">🛋️</span>
-              <span className="space-text">Indoor chill spots</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">📖</span>
-              <span className="space-text">Reading nooks</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">💤</span>
-              <span className="space-text">Hammocks</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">⛵</span>
-              <span className="space-text">Boats</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">🎨</span>
-              <span className="space-text">Studios</span>
-            </div>
-            <div className="space-item">
-              <span className="space-emoji">🎪</span>
-              <span className="space-text">Porches</span>
-            </div>
+            {[
+              { emoji: '🌿', text: 'Balconies with plants' },
+              { emoji: '🌇', text: 'Rooftops with views' },
+              { emoji: '🌼', text: 'Garden corners' },
+              { emoji: '🛋️', text: 'Indoor chill spots' },
+              { emoji: '📖', text: 'Reading nooks' },
+              { emoji: '💤', text: 'Hammocks' },
+              { emoji: '⛵', text: 'Boats' },
+              { emoji: '🎨', text: 'Studios' },
+              { emoji: '🎪', text: 'Porches' },
+            ].map(space => (
+              <div 
+                key={space.text} 
+                className="space-item" 
+                style={{ boxShadow: `0 0px 500px ${emojiColorMap[space.emoji] || 'rgba(0, 0, 0, 0.1)'}` }}
+              >
+                <span className="space-emoji">{space.emoji}</span>
+                <span className="space-text">{space.text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

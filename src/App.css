@@ -358,8 +358,10 @@
 
 .space-item:hover {
   background-color: whitesmoke;
-  border: 1px solid #5b5a5a;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* The dynamic box-shadow is now applied directly, so we can remove or adjust the hover shadow. */
+  /* For now, let's slightly enhance the existing shadow or transform the item. */
+  transform: translateY(-2px); /* Example: lift item slightly on hover */
+  /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Optional: if we want a different shadow on hover */
 }
 
 .space-emoji {

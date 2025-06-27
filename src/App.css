@@ -327,6 +327,75 @@
   text-align: left;
 }
 
+.host-section {
+  padding: 0;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  margin: 40px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 400px;
+}
+
+.host-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.host-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.host-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.host-subtitle {
+  color: white;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 25px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.host-description {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.host-btn {
+  margin-top: 10px;
+}
+
 @media (max-width: 768px) {
   .logo-container {
     top: 15px;
@@ -430,6 +499,27 @@
     margin-bottom: 40px;
   }
   
+  .host-section {
+    margin: 20px 10px;
+    min-height: 350px;
+  }
+  
+  .host-container {
+    padding: 50px 30px;
+  }
+  
+  .host-title {
+    font-size: 2.2rem;
+  }
+  
+  .host-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .host-description {
+    font-size: 1.1rem;
+  }
+  
   .spaces-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -441,6 +531,10 @@
   
   .space-text {
     font-size: 1rem;
+  }
+  
+  .host-section {
+    padding: 60px 20px;
   }
 }
 
@@ -529,5 +623,26 @@
   
   .space-text {
     font-size: 0.95rem;
+  }
+  
+  .host-section {
+    margin: 15px 5px;
+    min-height: 300px;
+  }
+  
+  .host-container {
+    padding: 40px 20px;
+  }
+  
+  .host-title {
+    font-size: 1.8rem;
+  }
+  
+  .host-subtitle {
+    font-size: 1rem;
+  }
+  
+  .host-description {
+    font-size: 1rem;
   }
 }

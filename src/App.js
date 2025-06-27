@@ -157,6 +157,22 @@ function App() {
           </div>
         </div>
       </div>
+      
+      <div 
+        className="host-section"
+        style={{
+          backgroundImage: `url(https://i.ibb.co/Fk8VzXc9/assets-task-01jyqb31jjfvyt17dws5zqdkdg-1750982686-img-0.webp)`
+        }}
+      >
+        <div className="host-container">
+          <h2 className="host-title">Host Your Space</h2>
+          <p className="host-subtitle">Have a balcony, nook, or porch someone could use?</p>
+          <p className="host-description">
+            Let your space help someone reset. Earn for 15–60 minute bookings with full control and easy setup.
+          </p>
+          <button className="btn btn-white host-btn">Host your space</button>
+        </div>
+      </div>
     </div>
     
   );

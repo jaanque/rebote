@@ -4,10 +4,10 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 const SkeletonLoader = () => {
   return (
-    <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
+    <SkeletonTheme baseColor="#cccccc" highlightColor="#e0e0e0">
       <div className="App">
         {/* Hero Section Skeleton - Now a single block to represent the background image primarily */}
-        <div style={{ width: '100%', height: '100vh', marginBottom: '2rem' }}>
+        <div style={{ width: '100%', height: '100vh', marginBottom: '2rem', borderRadius: '20px', overflow: 'hidden' }}> {/* Added borderRadius and overflow:hidden */}
           <Skeleton height="100%" width="100%" style={{ lineHeight: 'normal' }} /> {/*  lineHeight: 'normal' can help if skeleton is too small due to font-size */}
         </div>
 

@@ -6,14 +6,9 @@ const SkeletonLoader = () => {
   return (
     <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
       <div className="App">
-        {/* Hero Section Skeleton */}
-        <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem' }}>
-          <Skeleton height={40} width={`80%`} style={{ marginBottom: '1rem' }} />
-          <Skeleton height={20} width={`60%`} style={{ marginBottom: '2rem' }} />
-          <div style={{ display: 'flex' }}>
-            <Skeleton height={40} width={100} style={{ marginRight: '1rem' }} />
-            <Skeleton height={40} width={100} />
-          </div>
+        {/* Hero Section Skeleton - Now a single block to represent the background image primarily */}
+        <div style={{ width: '100%', height: '100vh', marginBottom: '2rem' }}>
+          <Skeleton height="100%" width="100%" style={{ lineHeight: 'normal' }} /> {/*  lineHeight: 'normal' can help if skeleton is too small due to font-size */}
         </div>
 
         {/* WhatIsrebote Skeleton */}

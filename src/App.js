@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import './App.css';
 // import './2-App.css'; // Merged into App.css
 // import './WhatIsrebote.css'; // Merged into App.css
 import Footer from './footer.js';
 import WhatIsrebote from './WhatIsrebote.js';
+import SkeletonLoader from './SkeletonLoader.js'; // Import SkeletonLoader
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -29,6 +30,15 @@ function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiEmoji, setConfettiEmoji] = useState('');
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
+
+  // Simulate data loading
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjusted delay to 2 seconds
+    return () => clearTimeout(timer);
+  }, []);
 
   const emojiColorMap = {
     '🌿': 'rgba(131, 229, 18, 0.5)', // Green
@@ -76,6 +86,10 @@ function App() {
       setShowConfetti(false);
     }, 9000);
   };
+
+  if (isLoading) {
+    return <SkeletonLoader />;
+  }
   
   return (
     <div className="App">

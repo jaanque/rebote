@@ -6,6 +6,41 @@
   box-sizing: border-box;
 }
 
+/* Skeleton Loader Specific Styles (can be minimal if inline styles in SkeletonLoader.js are sufficient) */
+.skeleton-hero {
+  height: 100vh; /* Match hero section height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.skeleton-section {
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust based on your layout */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skeleton-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.skeleton-footer-item {
+  margin-bottom: 0.5rem;
+}
+
 .App-container {
   border-radius: 20px;
   min-height: calc(95vh - 2rem); /* Adjust based on new padding */
